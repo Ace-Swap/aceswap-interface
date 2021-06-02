@@ -1,7 +1,7 @@
 {
-    "name": "@sushiswap/interface",
-    "description": "SushiSwap Interface",
-    "homepage": "https://app.sushi.com",
+    "name": "@aceswap/interface",
+    "description": "AceSwap Interface",
+    "homepage": "https://app.ace.com",
     "private": true,
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
@@ -25,10 +25,10 @@
         "@reach/dialog": "^0.10.3",
         "@reach/portal": "^0.10.3",
         "@reduxjs/toolkit": "^1.3.5",
-        "@sushiswap/core": "2.0.0-canary.0",
-        "@sushiswap/default-token-list": "^6.13.0",
-        "@sushiswap/sdk": "5.0.0-canary.7",
-        "@sushiswap/sushi-data": "^2.0.0-canary.2",
+        "@aceswap/core": "^1.0.0",
+        "@aceswap/default-token-list": "^1.0.0",
+        "@aceswap/sdk": "^1.0.0",
+        "@aceswap/ace-data": "^1.0.26",
         "@tailwindcss/aspect-ratio": "^0.2.0",
         "@tailwindcss/forms": "^0.2.1",
         "@tailwindcss/line-clamp": "^0.2.0",
