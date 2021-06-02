@@ -5,7 +5,7 @@ import { Alert, Button } from 'components'
 import { useActiveWeb3React } from 'hooks/useActiveWeb3React'
 import { ApprovalState, useApproveCallback } from 'hooks/useApproveCallback'
 import { tryParseAmount } from 'state/swap/hooks'
-import { WETH } from '@sushiswap/sdk'
+import { WETH } from '@aceswap/sdk'
 import Dots from './Dots'
 
 export function KashiApproveButton({ content, color }: any): any {

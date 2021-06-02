@@ -2,7 +2,7 @@ import React from 'react'
 import { Redirect, RouteComponentProps } from 'react-router-dom'
 import AddLiquidity from './index'
 
-import sushiData from '@sushiswap/sushi-data'
+import sushiData from '@aceswap/ace-data'
 
 // note: only for mainnet
 export function RedirectPairToLiquidity({ location }: RouteComponentProps) {

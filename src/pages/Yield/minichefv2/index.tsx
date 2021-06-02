@@ -12,7 +12,7 @@ import Badge from '../../../components/Badge'
 import { Helmet } from 'react-helmet'
 
 import { useActiveWeb3React } from '../../../hooks/useActiveWeb3React'
-import { ChainId, Currency, ETHER, Token } from '@sushiswap/sdk'
+import { ChainId, Currency, ETHER, Token } from '@aceswap/sdk'
 import { getTokenIcon } from 'kashi/functions'
 
 import DoubleRewardBadge from '../../../assets/images/2x-square.jpg'

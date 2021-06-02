@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import sushiData from '@sushiswap/sushi-data'
+import sushiData from '@aceswap/ace-data'
 import { useActiveWeb3React } from 'hooks/useActiveWeb3React'
 import { useBoringHelperContract } from 'hooks/useContract'
 import _ from 'lodash'

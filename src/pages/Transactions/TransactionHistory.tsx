@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Currency } from '@sushiswap/sdk'
+import { Currency } from '@aceswap/sdk'
 import DoubleCurrencyLogo from 'components/DoubleLogo'
 import { ThemeContext } from 'styled-components'
 import { CheckCircle, ArrowUpRight } from 'react-feather'

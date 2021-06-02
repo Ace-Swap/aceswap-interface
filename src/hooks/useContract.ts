@@ -1,5 +1,5 @@
 import { Contract } from '@ethersproject/contracts'
-import SUSHIROLL_ABI from '@sushiswap/core/abi/SushiRoll.json'
+import ACEROLL_ABI from '@aceswap/core/abi/AceRoll.json'
 import {
     BAR_ADDRESS,
     ChainId,
@@ -7,10 +7,10 @@ import {
     MAKER_ADDRESS,
     MASTERCHEF_ADDRESS,
     ROUTER_ADDRESS,
-    SUSHI_ADDRESS,
+    ACE_ADDRESS,
     TIMELOCK_ADDRESS,
     WETH
-} from '@sushiswap/sdk'
+} from '@aceswap/sdk'
 import { abi as UNI_ABI } from '@uniswap/governance/build/Uni.json'
 import { abi as STAKING_REWARDS_ABI } from '@uniswap/liquidity-staker/build/StakingRewards.json'
 import { abi as MERKLE_DISTRIBUTOR_ABI } from '@uniswap/merkle-distributor/build/MerkleDistributor.json'
@@ -164,7 +164,7 @@ export function useMulticallContract(): Contract | null {
 
 export function useSushiContract(withSignerIfPossible = true): Contract | null {
     const { chainId } = useActiveWeb3React()
-    return useContract(chainId && SUSHI_ADDRESS[chainId], SUSHI_ABI, withSignerIfPossible)
+    return useContract(chainId && ACE_ADDRESS[chainId], SUSHI_ABI, withSignerIfPossible)
 }
 
 export function useMasterChefContract(withSignerIfPossible?: boolean): Contract | null {
@@ -377,15 +377,15 @@ export function useSushiRollContract(version: 'v1' | 'v2' = 'v2'): Contract | nu
                 break
         }
     }
-    return useContract(address, SUSHIROLL_ABI, true)
+    return useContract(address, ACEROLL_ABI, true)
 }
 
 // export function usePancakeRollV1Contract(): Contract | null {
-//     return useContract('0x677978dE066b3f5414eeA56644d9fCa3c75482a1', SUSHIROLL_ABI, true)
+//     return useContract('0x677978dE066b3f5414eeA56644d9fCa3c75482a1', ACEROLL_ABI, true)
 // }
 
 // export function usePancakeRollV2Contract(): Contract | null {
-//     return useContract('', SUSHIROLL_ABI, true)
+//     return useContract('', ACEROLL_ABI, true)
 // }
 
 export function useDashboardContract(): Contract | null {

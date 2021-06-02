@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import MoreInfoSymbol from '../../assets/images/more-info.svg'
-import sushiData from '@sushiswap/sushi-data'
+import sushiData from '@aceswap/ace-data'
 
 export default function APRCard() {
     const [Apr, setApr] = useState<any>()

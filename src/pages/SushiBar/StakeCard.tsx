@@ -4,7 +4,7 @@ import { Input as NumericalInput } from '../../components/NumericalInput'
 import ErrorTriangle from '../../assets/images/error-triangle.svg'
 import { ApprovalState, useApproveCallback } from '../../hooks/useApproveCallback'
 import { ethers } from 'ethers'
-import { BAR_ADDRESS, Token, TokenAmount } from '@sushiswap/sdk'
+import { BAR_ADDRESS, Token, TokenAmount } from '@aceswap/sdk'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useWalletModalToggle } from '../../state/application/hooks'
 import { BalanceProps } from '../../hooks/useTokenBalance'
@@ -13,7 +13,7 @@ import useSushiBar from '../../hooks/useSushiBar'
 import TransactionFailedModal from './TransactionFailedModal'
 import { Button, Dots } from '../../components'
 
-import sushiData from '@sushiswap/sushi-data'
+import sushiData from '@aceswap/ace-data'
 
 const INPUT_CHAR_LIMIT = 18
 

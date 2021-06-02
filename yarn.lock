@@ -127,7 +127,7 @@
     subscriptions-transport-ws "0.9.16"
     ws "7.2.0"
 
-"@aceswap/core@1.0.0":
+"@aceswap/core@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@aceswap/core/-/core-1.0.0.tgz#bf6fc20982c59acda3309425a0181b3a2b60747a"
   integrity sha512-qvxwt8bUnq37OC0ZIiXhED5Ay/meEv/Bn4MZaJjaFxhxhRcpbiwhMjER+Yd/H9NZVqD5XZT5EwqgdygzAmf7Hg==
@@ -137,10 +137,10 @@
   resolved "https://registry.yarnpkg.com/@aceswap/default-token-list/-/default-token-list-1.0.0.tgz#417f62f3310ee36206048b8185f8ef511aed9f35"
   integrity sha512-JKqfeJdI3CC6n7ma7R3L6hH7hK+s/KYM1M5VIZDdobKmQckrZ4xddVSbK/7+9BVOUMBM6be/vcBNTnoKVU4Jyg==
 
-"@aceswap/sdk@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@aceswap/sdk/-/sdk-1.0.0.tgz#c6cee1ffa0e7931bcbaa71413bea7ce0303cf8ce"
-  integrity sha512-u3Cm/IlkipHkuEq8eE+b5No/lRGAYv8GWzITOlulQSJxRInXl9a1Gel2wOE6Bm/ZZSOCFZnLQ9Oi5UJh06724g==
+"@aceswap/sdk@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@aceswap/sdk/-/sdk-1.0.3.tgz#5c8b691d2d72f92fb581dd42e9e6268bd150a2a1"
+  integrity sha512-oodCvbjQKKOAEIC1u9jM+c1dlUuxHJvV2oJL/p7DNDxZ+O9p3Zl8GYih64nPByEn617Uw631TeM9KvLvc4Ck/A==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
@@ -10392,9 +10392,9 @@ graph-results-pager@LufyCZ/graph-results-pager#types:
   dependencies:
     node-fetch "2.6.1"
 
-"graph-results-pager@git+https://github.com/LufyCZ/graph-results-pager.git":
+"graph-results-pager@https://github.com/LufyCZ/graph-results-pager":
   version "1.0.3"
-  resolved "git+https://github.com/LufyCZ/graph-results-pager.git#9b230f05b8d79aeedc9e167ac5a1fea33e04d51f"
+  resolved "https://github.com/LufyCZ/graph-results-pager#9b230f05b8d79aeedc9e167ac5a1fea33e04d51f"
   dependencies:
     node-fetch "2.6.1"
 

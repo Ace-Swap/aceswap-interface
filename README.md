@@ -20,7 +20,7 @@ or visit [app.sushi.com](https://app.sushi.com).
 ## Listing a token
 
 Please see the
-[@sushiswap/default-token-list](https://github.com/sushiswap/default-token-list)
+[@aceswap/default-token-list](https://github.com/sushiswap/default-token-list)
 repository.
 
 ## Development

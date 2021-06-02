@@ -1,4 +1,4 @@
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId } from '@aceswap/sdk'
 
 export type ChainlinkToken = {
     symbol: string

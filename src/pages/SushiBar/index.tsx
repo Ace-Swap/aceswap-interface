@@ -7,7 +7,7 @@ import InfoCard from './InfoCard'
 import APRCard from './APRCard'
 import StakeCard from './StakeCard'
 import BalanceCard from './BalanceCard'
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId } from '@aceswap/sdk'
 import { SUSHI, XSUSHI } from '../../constants'
 import useTokenBalance from '../../hooks/useTokenBalance'
 
