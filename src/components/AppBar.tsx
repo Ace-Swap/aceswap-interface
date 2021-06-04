@@ -2,7 +2,7 @@ import { ChainId, Currency } from '@aceswap/sdk'
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import Logo from '../assets/images/logo.png'
+import Logo from '../assets/images/spade-logo.svg'
 import { useActiveWeb3React } from '../hooks/useActiveWeb3React'
 import { useETHBalances } from '../state/wallet/hooks'
 import { ReactComponent as Burger } from '../assets/images/burger.svg'
@@ -11,6 +11,7 @@ import Sushi from '../assets/kashi/tokens/sushi-square.jpg'
 import xSushi from '../assets/kashi/tokens/xsushi-square.jpg'
 import Web3Network from './Web3Network'
 import Web3Status from './Web3Status'
+import Button from './Button'
 import MoreMenu from './Menu'
 import { ExternalLink, NavLink } from './Link'
 import { Disclosure } from '@headlessui/react'
@@ -48,7 +49,7 @@ function AppBar(): JSX.Element {
                                         <img src={Logo} alt="Sushi" className="h-10 w-auto" />
                                     </div>
                                     <div className="hidden sm:block sm:ml-4">
-                                        <div className="flex space-x-2">
+                                        <div className="flex space-x-2 text-gray-500">
                                             <NavLink id={`swap-nav-link`} to={'/swap'}>
                                                 {t('swap')}
                                             </NavLink>
@@ -71,6 +72,16 @@ function AppBar(): JSX.Element {
                                                 </NavLink>
                                             )}
                                             {chainId === ChainId.MAINNET && (
+                                                <NavLink id={`sushibar-nav-link`} to={'/sushibar'}>
+                                                    Stake
+                                                </NavLink>
+                                            )}
+                                            {chainId === ChainId.MAINNET && (
+                                                <NavLink id={`sushibar-nav-link`} to={'/bento/kashi/lend'}>
+                                                    Vote
+                                                </NavLink>
+                                            )}
+                                            {/* {chainId === ChainId.MAINNET && (
                                                 <NavLink id={`sushibar-nav-link`} to={'/sushibar'}>
                                                     SushiBar
                                                 </NavLink>
@@ -110,7 +121,7 @@ function AppBar(): JSX.Element {
                                                     >
                                                         Analytics
                                                     </ExternalLink>
-                                                )}
+                                                )} */}
                                         </div>
                                     </div>
                                 </div>
@@ -270,7 +281,8 @@ function AppBar(): JSX.Element {
                                             </div>
                                         )}
 
-                                        <div className="w-auto flex items-center rounded bg-dark-900 hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
+                                        <Button className="rounded bg-dark-600 hover:bg-dark-800 p-0.5">TEST </Button>
+                                        <div className="w-auto flex items-center text-white rounded bg-dark-600 hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
                                             {account && chainId && userEthBalance && (
                                                 <>
                                                     <div className="py-2 px-3 text-primary text-bold">
@@ -279,6 +291,8 @@ function AppBar(): JSX.Element {
                                                     </div>
                                                 </>
                                             )}
+                                            <button id="network-select" className="px-2 mr-2 bg-green-300 hover:bg-green-600"><p className="text-base">Network Select</p></button>
+                                            
                                             <Web3Status />
                                         </div>
                                         <MoreMenu />

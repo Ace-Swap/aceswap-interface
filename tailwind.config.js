@@ -221,7 +221,9 @@ module.exports = {
             placeholderColor: ['hover', 'active'],
             ringWidth: ['disabled'],
             ringColor: ['disabled']
-        }
+        },
+        borderColor: ['responsive', 'hover', 'active', 'focus']
+
     },
     plugins: [
         // require('@tailwindcss/typography'),
@@ -245,7 +247,7 @@ module.exports = {
                         border: 'double 1px transparent',
                         borderRadius: '0.375rem',
                         backgroundImage:
-                            'linear-gradient(#202231, #202231), linear-gradient(to right, #0993EC, #F338C3)',
+                            'linear-gradient(#202231, #202231), linear-gradient(to right, #F338C3, #0993EC)',
                         backgroundOrigin: 'border-box',
                         backgroundClip: 'padding-box, border-box'
                     }
