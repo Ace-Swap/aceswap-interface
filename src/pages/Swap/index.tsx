@@ -396,14 +396,14 @@ export default function Swap() {
                                 style={{ padding: '0 1rem' }}
                             >
                                 <button
-                                    className="bg-dark-900 rounded-full p-3px -mt-6 -mb-6 z-10"
+                                    className="bg-dark-900 rounded-full p-3px m-auto sm:ml-20 -mt-6 -mb-6 z-10"
                                     onClick={() => {
                                         setApprovalSubmitted(false) // reset 2 step UI for approvals
                                         onSwitchTokens()
                                     }}
                                 >
                                     <div
-                                        className="bg-dark-800 hover:bg-dark-700 rounded-full p-3"
+                                        className="bg-dark-800 hover:bg-dark-700 rounded-full p-3 border-high-emphesis border-2"
                                         onMouseEnter={() => setAnimateSwapArrows(true)}
                                         onMouseLeave={() => setAnimateSwapArrows(false)}
                                     >
