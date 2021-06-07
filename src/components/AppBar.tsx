@@ -2,7 +2,7 @@ import { ChainId, Currency } from '@aceswap/sdk'
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import Logo from '../assets/images/logo.png'
+import Logo from '../assets/images/spade-logo.svg'
 import { useActiveWeb3React } from '../hooks/useActiveWeb3React'
 import { useETHBalances } from '../state/wallet/hooks'
 import { ReactComponent as Burger } from '../assets/images/burger.svg'
@@ -49,12 +49,13 @@ function AppBar(): JSX.Element {
                                     </div>
                                     <div className="hidden sm:block sm:ml-4">
                                         <div className="flex space-x-2">
-                                            <NavLink id={`swap-nav-link`} to={'/swap'}>
+                                            <NavLink id={`swap-nav-link`} to={'/swap'}  activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                 {t('swap')}
                                             </NavLink>
                                             <NavLink
                                                 id={`pool-nav-link`}
                                                 to={'/pool'}
+                                                activeClassName="font-bold border-high-emphesis border-solid border-2 rounded"
                                                 isActive={(match, { pathname }) =>
                                                     Boolean(match) ||
                                                     pathname.startsWith('/add') ||
@@ -66,33 +67,33 @@ function AppBar(): JSX.Element {
                                                 {t('pool')}
                                             </NavLink>
                                             {chainId && [ChainId.MAINNET, ChainId.MATIC].includes(chainId) && (
-                                                <NavLink id={`yield-nav-link`} to={'/yield'}>
+                                                <NavLink id={`yield-nav-link`} to={'/yield'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                     Yield
                                                 </NavLink>
                                             )}
                                             {chainId === ChainId.MAINNET && (
-                                                <NavLink id={`sushibar-nav-link`} to={'/sushibar'}>
-                                                    SushiBar
+                                                <NavLink id={`sushibar-nav-link`} to={'/sushibar'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
+                                                    Stake
                                                 </NavLink>
                                             )}
-                                            {chainId &&
+                                            {/* {chainId &&
                                                 [ChainId.MAINNET, ChainId.KOVAN, ChainId.BSC, ChainId.MATIC].includes(
                                                     chainId
                                                 ) && (
-                                                    <NavLink id={`kashi-nav-link`} to={'/bento/kashi/lend'}>
+                                                    <NavLink id={`kashi-nav-link`} to={'/bento/kashi/lend'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                         Lend
                                                     </NavLink>
-                                                )}
+                                                )} */}
                                             {chainId &&
                                                 [ChainId.MAINNET, ChainId.KOVAN, ChainId.BSC, ChainId.MATIC].includes(
                                                     chainId
                                                 ) && (
-                                                    <NavLink id={`bento-nav-link`} to={'/bento'}>
-                                                        BentoBox
+                                                    <NavLink id={`bento-nav-link`} to={'/bento'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
+                                                        Vote
                                                     </NavLink>
                                                 )}
-                                            {chainId === ChainId.MAINNET && (
-                                                <NavLink id={`vesting-nav-link`} to={'/vesting'}>
+                                            {/* {chainId === ChainId.MAINNET && (
+                                                <NavLink id={`vesting-nav-link`} to={'/vesting'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                     Vesting
                                                 </NavLink>
                                             )}
@@ -110,7 +111,7 @@ function AppBar(): JSX.Element {
                                                     >
                                                         Analytics
                                                     </ExternalLink>
-                                                )}
+                                                )} */}
                                         </div>
                                     </div>
                                 </div>

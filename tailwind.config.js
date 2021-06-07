@@ -168,6 +168,10 @@ module.exports = {
                 secondary: '#7F7F7F',
                 'high-emphesis': '#E3E3E3'
             },
+            borderColor: {
+                ...defaultTheme.borderColor,
+                'high-emphesis': '#00BCF8 !important',
+            },
             backgroundColor: {
                 ...defaultTheme.backgroundColor,
                 input: '#2E3348'
@@ -215,7 +219,8 @@ module.exports = {
         extend: {
             backgroundColor: ['checked', 'disabled'],
             backgroundImage: ['hover', 'focus'],
-            borderColor: ['checked', 'disabled'],
+            borderColor: ['checked', 'disabled', 'active'],
+            borderStyle: ['hover', 'focus', 'active'],
             cursor: ['disabled'],
             opacity: ['hover', 'disabled'],
             placeholderColor: ['hover', 'active'],
@@ -245,7 +250,7 @@ module.exports = {
                         border: 'double 1px transparent',
                         borderRadius: '0.375rem',
                         backgroundImage:
-                            'linear-gradient(#202231, #202231), linear-gradient(to right, #0993EC, #F338C3)',
+                            'linear-gradient(#202231, #202231), linear-gradient(to right, #F338C3, #0993EC)',
                         backgroundOrigin: 'border-box',
                         backgroundClip: 'padding-box, border-box'
                     }
