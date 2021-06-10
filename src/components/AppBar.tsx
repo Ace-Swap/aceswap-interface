@@ -283,7 +283,7 @@ function AppBar(): JSX.Element {
                                         )}
 
                                         {/* <Button className="rounded bg-dark-600 hover:bg-dark-800 p-0.5">TEST </Button> */}
-                                        <div className="w-auto flex items-center text-white rounded bg-dark-600 hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
+                                        <div className="w-auto flex items-center text-white rounded p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
                                             {account && chainId && userEthBalance && (
                                                 <>
                                                     <div className="py-2 px-3 text-primary text-bold">
@@ -292,7 +292,7 @@ function AppBar(): JSX.Element {
                                                     </div>
                                                 </>
                                             )}
-                                            <button id="network-select" className="px-2 mr-2 bg-green-300 hover:bg-green-600"><p className="text-base">Network Select</p></button>
+                                            {/* <button id="network-select" className="px-2 mr-2 bg-green-300 hover:bg-green-600"><p className="text-base">Network Select</p></button> */}
                                             
                                             <Web3Status />
                                         </div>

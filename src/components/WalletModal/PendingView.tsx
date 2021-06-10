@@ -111,6 +111,7 @@ export default function PendingView({
                             return null
                         }
                     }
+                    console.log('option', option.color)
                     return (
                         <Option
                             id={`connect-${key}`}

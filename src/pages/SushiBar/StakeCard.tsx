@@ -37,15 +37,15 @@ const StyledNumericalInput = styled(NumericalInput)`
 
 const tabStyle =
     'flex justify-center items-center h-full w-full rounded-lg cursor-pointer text-caption2 md:text-caption'
-const activeTabStyle = `${tabStyle} text-high-emphesis font-bold bg-dark-900`
+const activeTabStyle = `${tabStyle} bg-white font-bold text-black border-high-emphesis border-solid border rounded`
 const inactiveTabStyle = `${tabStyle} text-secondary`
 
 const buttonStyle =
     'flex justify-center items-center w-full h-14 rounded font-bold md:font-medium md:text-lg mt-5 text-sm focus:outline-none focus:ring'
 const buttonStyleEnabled = `${buttonStyle} text-high-emphesis bg-gradient-to-r from-pink-red to-light-brown hover:opacity-90`
 const buttonStyleInsufficientFunds = `${buttonStyleEnabled} opacity-60`
-const buttonStyleDisabled = `${buttonStyle} text-secondary bg-dark-700`
-const buttonStyleConnectWallet = `${buttonStyle} text-high-emphesis bg-cyan-blue hover:bg-opacity-90`
+const buttonStyleDisabled = `${buttonStyle} text-secondary bg-gray-300`
+const buttonStyleConnectWallet = `${buttonStyle} text-high-emphesis bg-blue hover:bg-opacity-90`
 
 interface StakeCardProps {
     sushiBalance: BalanceProps
@@ -148,8 +148,8 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
     return (
         <>
             <TransactionFailedModal isOpen={modalOpen} onDismiss={() => setModalOpen(false)} />
-            <div className="bg-dark-900 shadow-swap-blue-glow w-full max-w-xl pt-2 pb-6 md:pb-9 px-3 md:pt-4 md:px-8 rounded">
-                <div className="flex w-full h-14 bg-dark-800 rounded">
+            <div className="bg-gray-200 shadow-swap-blue-glow w-full max-w-xl pt-2 pb-6 md:pb-9 px-3 md:pt-4 md:px-8 rounded border-high-emphesis border-solid border-2">
+                <div className="flex w-full h-14 bg-white rounded">
                     <div
                         className="h-full w-6/12 p-0.5"
                         onClick={() => {
@@ -175,7 +175,7 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
                 </div>
 
                 <div className="flex justify-between items-center w-full mt-6">
-                    <p className="text-large md:text-h5 font-bold text-high-emphesis">
+                    <p className="text-large md:text-h5 font-bold text-black">
                         {activeTab === 0 ? 'Stake SUSHI' : 'Unstake'}
                     </p>
                     <div className="border-gradient-r-pink-red-light-brown-dark-pink-red border-transparent border-solid border rounded-3xl px-4 md:px-3.5 py-1.5 md:py-0.5 text-high-emphesis text-xs font-medium md:text-caption md:font-normal">
@@ -186,7 +186,7 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
                 <StyledNumericalInput
                     value={input}
                     onUserInput={handleInput}
-                    className={`w-full h-14 px-3 md:px-5 mt-5 rounded bg-dark-800 text-caption2 md:text-lg font-bold text-dark-800${
+                    className={`w-full h-14 px-3 md:px-5 mt-5 rounded bg-white text-black md:text-lg font-bold text-black${
                         inputError ? ' pl-9 md:pl-12' : ''
                     }`}
                     placeholder=" "
@@ -201,8 +201,8 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
                         <div className="flex">
                             {inputError && <img className="w-4 md:w-5 mr-2" src={ErrorTriangle} alt="error" />}
                             <p
-                                className={`text-caption2 md:text-lg font-bold ${
-                                    input ? 'text-high-emphesis' : 'text-secondary'
+                                className={`text-black md:text-lg font-bold ${
+                                    input ? 'text-black' : 'text-black'
                                 }`}
                             >
                                 {`${input ? input : '0'} ${activeTab === 0 ? '' : 'x'}SUSHI`}
