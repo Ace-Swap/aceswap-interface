@@ -58,27 +58,27 @@ const Web3StatusError = styled(Web3StatusGeneric)`
 `
 
 const Web3StatusConnect = styled(Web3StatusGeneric)<{ faded?: boolean }>`
-    background-color: ${({ theme }) => theme.primary4};
+    background-color: ${({ theme }) => theme.white};
     border: none;
-    color: ${({ theme }) => theme.primaryText1};
+    color: ${({ theme }) => theme.black};
     font-weight: 500;
 
     :hover,
     :focus {
-        border: 1px solid ${({ theme }) => darken(0.05, theme.primary4)};
-        color: ${({ theme }) => theme.primaryText1};
+        border: 1px solid #00BCF8;
+        color: ${({ theme }) => theme.black};
     }
 
     ${({ faded }) =>
         faded &&
         css`
-            background-color: ${({ theme }) => theme.primary5};
-            border: 1px solid ${({ theme }) => theme.primary5};
-            color: ${({ theme }) => theme.primaryText1};
+            background-color: white;
+            border: 1px solid gray;
+            color: ${({ theme }) => theme.black};
 
             :hover,
             :focus {
-                border: 1px solid ${({ theme }) => darken(0.05, theme.primary4)};
+                border: 1px solid #00BCF8;
                 color: ${({ theme }) => darken(0.05, theme.primaryText1)};
             }
         `}

@@ -19,7 +19,7 @@ export default function APRCard() {
         fetchData()
     }, [])
     return (
-        <div className="flex w-full justify-between items-center max-w-xl h-24 p-4 md:pl-5 md:pr-7 rounded bg-light-yellow bg-opacity-40">
+        <div className="flex w-full justify-between items-center max-w-xl h-24 p-4 md:pl-5 md:pr-7 rounded bg-blue bg-opacity-70">
             <div className="flex flex-col">
                 <div className="flex flex-nowrap justify-center items-center mb-4 md:mb-2">
                     <p className="whitespace-nowrap text-caption2 md:text-lg md:leading-5 font-bold text-high-emphesis">
@@ -45,7 +45,7 @@ export default function APRCard() {
                 <p className="text-right text-high-emphesis font-bold text-lg md:text-h4 mb-1">
                     {`${Apr ? Apr.toFixed(2) + '%' : 'Loading...'}`}
                 </p>
-                <p className="text-right text-primary w-32 md:w-64 text-caption2 md:text-base">{`Yesterday's APR`}</p>
+                <p className="text-right  w-32 md:w-64 text-gray-800 md:text-base">{`Yesterday's APR`}</p>
             </div>
         </div>
     )
