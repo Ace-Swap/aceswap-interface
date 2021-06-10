@@ -332,7 +332,7 @@ export default function Swap() {
                 onConfirm={handleConfirmTokenWarning}
             />
             <SwapPoolTabs active={'swap'} />
-            <div className="bg-dark-900 shadow-swap-blue-glow w-full max-w-2xl rounded">
+            <div className="bg-gray-200 shadow-swap-blue-glow w-full max-w-2xl rounded border-high-emphesis border-solid border-2">
                 <SwapHeader input={currencies[Field.INPUT]} output={currencies[Field.OUTPUT]} />
                 <Wrapper id="swap-page">
                     <ConfirmSwapModal
@@ -396,14 +396,14 @@ export default function Swap() {
                                 style={{ padding: '0 1rem' }}
                             >
                                 <button
-                                    className="bg-dark-900 rounded-full p-3px -mt-6 -mb-6 z-10"
+                                    className="bg-gray-200 rounded-full p-3px m-auto sm:ml-20 -mt-6 -mb-6 z-10"
                                     onClick={() => {
                                         setApprovalSubmitted(false) // reset 2 step UI for approvals
                                         onSwitchTokens()
                                     }}
                                 >
                                     <div
-                                        className="bg-dark-800 hover:bg-dark-700 rounded-full p-3"
+                                        className="bg-white hover:bg-dark-200 color-black rounded-full p-3 border-high-emphesis border-solid border-2"
                                         onMouseEnter={() => setAnimateSwapArrows(true)}
                                         onMouseLeave={() => setAnimateSwapArrows(false)}
                                     >
@@ -489,7 +489,7 @@ export default function Swap() {
                                             <ClickableText
                                                 fontWeight={500}
                                                 fontSize={14}
-                                                color={theme.text2}
+                                                color="black"
                                                 onClick={toggleSettings}
                                             >
                                                 Slippage Tolerance
@@ -497,7 +497,7 @@ export default function Swap() {
                                             <ClickableText
                                                 fontWeight={500}
                                                 fontSize={14}
-                                                color={theme.text2}
+                                                color="black"
                                                 onClick={toggleSettings}
                                             >
                                                 {allowedSlippage / 100}%
@@ -514,7 +514,7 @@ export default function Swap() {
                                 <TYPE.main mb="4px">Unsupported Asset</TYPE.main>
                             </ButtonPrimary>
                         ) : !account ? (
-                            <ButtonLight onClick={toggleWalletModal}>Connect Wallet</ButtonLight>
+                            <ButtonPrimary onClick={toggleWalletModal}>Connect Wallet</ButtonPrimary>
                         ) : showWrap ? (
                             <ButtonPrimary disabled={Boolean(wrapInputError)} onClick={onWrap}>
                                 {wrapInputError ??
@@ -627,8 +627,8 @@ export default function Swap() {
                                 <div className="flex justify-between items-center overflow-hidden">
                                     <img src={PolygonLogo} className="w-24 h-24 absolute top-2" alt="" />
                                     <div className="pl-32">
-                                        <div className="text-high-emphesis">Check out Sushi on Polygon (Matic)</div>
-                                        <div className="text-high-emphesis text-sm">
+                                        <div className="text-white">Check out Sushi on Polygon (Matic)</div>
+                                        <div className="text-white text-sm">
                                             Click here to switch to Polygon using Metamask
                                         </div>
                                     </div>

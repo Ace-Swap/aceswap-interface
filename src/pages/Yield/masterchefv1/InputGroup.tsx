@@ -71,13 +71,13 @@ export default function InputGroup({
                     {type === 'LP' && (
                         <>
                             <Button
-                                color="default"
+                                color="green"
                                 onClick={() => history.push(`/add/${isWETH(token0Address)}/${isWETH(token1Address)}`)}
                             >
                                 Add Liquidity
                             </Button>
                             <Button
-                                color="default"
+                                color="red"
                                 onClick={() =>
                                     history.push(`/remove/${isWETH(token0Address)}/${isWETH(token1Address)}`)
                                 }
@@ -114,7 +114,7 @@ export default function InputGroup({
                         )}
                         <div className="flex items-center relative w-full mb-4">
                             <NumericalInput
-                                className="w-full p-3 bg-input rounded focus:ring focus:ring-blue pr-20"
+                                className="w-full p-3 bg-gray-200 text-black rounded focus:ring focus:ring-blue pr-20"
                                 value={depositValue}
                                 onUserInput={value => {
                                     setDepositValue(value)
@@ -165,7 +165,7 @@ export default function InputGroup({
                         )}
                         <div className="flex items-center relative w-full mb-4">
                             <NumericalInput
-                                className="w-full p-3 bg-input rounded focus:ring focus:ring-pink pr-20"
+                                className="w-full p-3 bg-gray-200 text-black rounded focus:ring focus:ring-pink pr-20"
                                 value={withdrawValue}
                                 onUserInput={value => {
                                     setWithdrawValue(value)

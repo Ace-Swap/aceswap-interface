@@ -24,6 +24,7 @@ import TransactionSettings from '../TransactionSettings'
 const StyledMenuIcon = styled(Settings)`
     height: 20px;
     width: 20px;
+    color: red;
 
     > * {
         stroke: ${({ theme }) => theme.text2};
@@ -139,8 +140,9 @@ export default function SettingsTab() {
                     </AutoColumn>
                 </ModalContentWrapper>
             </Modal>
-            <StyledMenuButton onClick={toggle} id="open-settings-dialog-button">
-                <StyledMenuIcon />
+            <StyledMenuButton onClick={toggle} id="open-settings-dialog-button" className="text-gray-500">
+                <Settings color="red" className="stroke-current" />
+                {/* <StyledMenuIcon /> */}
                 {/* {expertMode ? (
                     <EmojiWrapper>
                         <span role="img" aria-label="wizard-icon">

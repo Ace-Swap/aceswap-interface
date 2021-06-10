@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
     darkMode: false, // or 'media' or 'class'
@@ -166,11 +167,20 @@ module.exports = {
                 'low-emphesis': '#575757',
                 primary: '#BFBFBF',
                 secondary: '#7F7F7F',
-                'high-emphesis': '#E3E3E3'
+                'high-emphesis': '#fff'
+            },
+            borderColor: {
+                ...defaultTheme.borderColor,
+                'high-emphesis': '#00BCF8 !important',
             },
             backgroundColor: {
                 ...defaultTheme.backgroundColor,
-                input: '#2E3348'
+                input: '#2E3348',
+                primary: '#00BCF8',
+                secondary: '#BFBFBF',
+                // pink: 'rgba(244, 114, 182,1)',
+                'high-emphesis': '#E3E3E3',
+                black: '#000000'
             },
             boxShadow: {
                 ...defaultTheme.boxShadow,
@@ -215,7 +225,8 @@ module.exports = {
         extend: {
             backgroundColor: ['checked', 'disabled'],
             backgroundImage: ['hover', 'focus'],
-            borderColor: ['checked', 'disabled'],
+            borderColor: ['checked', 'disabled', 'active'],
+            borderStyle: ['hover', 'focus', 'active'],
             cursor: ['disabled'],
             opacity: ['hover', 'disabled'],
             placeholderColor: ['hover', 'active'],
@@ -245,7 +256,7 @@ module.exports = {
                         border: 'double 1px transparent',
                         borderRadius: '0.375rem',
                         backgroundImage:
-                            'linear-gradient(#202231, #202231), linear-gradient(to right, #0993EC, #F338C3)',
+                            'linear-gradient(#202231, #202231), linear-gradient(to right, #F338C3, #0993EC)',
                         backgroundOrigin: 'border-box',
                         backgroundClip: 'padding-box, border-box'
                     }
@@ -258,7 +269,8 @@ module.exports = {
     ],
     corePlugins: {
         fontFamily: true,
-        preflight: true
+        preflight: true,
+        backgroundColor: true,
     },
-    purge: process.env.NODE_ENV !== 'development' ? ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'] : false
+    purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html']
 }

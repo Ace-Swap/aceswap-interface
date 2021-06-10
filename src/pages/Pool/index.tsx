@@ -157,7 +157,7 @@ export default function Pool() {
             <Helmet>
                 <title>Pool | Sushi</title>
             </Helmet>
-            <div className="bg-dark-900 w-full max-w-2xl rounded shadow-liquidity-purple-glow">
+            <div className="bg-gray-200 shadow-swap-blue-glow w-full max-w-2xl rounded border-high-emphesis border-solid border-2">
                 <ExchangeHeader />
                 <div id="pool-page" className="p-4">
                     <SwapPoolTabs active={'pool'} />
@@ -169,7 +169,7 @@ export default function Pool() {
                         type="information"
                     />
                     <div className="flex justify-between items-center my-4">
-                        <div className="text-xl text-high-emphesis font-medium">Your Liquidity Positions</div>
+                        <div className="text-base font-medium">Your Liquidity Positions</div>
                         <div className="text-sm font-bold">
                             Don&apos;t see a pool you joined?{' '}
                             <Link id="import-pool-link" to="/find" className="text-blue">
@@ -231,13 +231,13 @@ export default function Pool() {
                             </Text>
                         )}
                         <div className="grid grid-cols-2 gap-4">
-                            <Button id="join-pool-button" color="gradient" onClick={() => history.push('/add/ETH')}>
+                            <Button id="join-pool-button" color="blue" onClick={() => history.push('/add/ETH')}>
                                 Add Liquidity
                             </Button>
                             <Button
                                 id="create-pool-button"
-                                color="default"
-                                className="bg-dark-800"
+                                color="pink"
+                                // className="bg-dark-800"
                                 onClick={() => history.push('/create/ETH')}
                             >
                                 Create a pair

@@ -162,7 +162,7 @@ export default function CurrencyInputPanel({
     const valueUSDC = formattedNum(Number(value) * Number(currencyUSDC))
 
     return (
-        <div id={id} className="rounded bg-dark-800 p-5">
+        <div id={id} className="rounded bg-white p-5">
             <div
                 className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-between"
                 // hideInput={hideInput}
@@ -232,16 +232,16 @@ export default function CurrencyInputPanel({
                             ) : (
                                 <div className="flex flex-1 flex-col items-start justify-center mx-3.5">
                                     {label && (
-                                        <div className="text-xs text-secondary font-medium whitespace-nowrap">
+                                        <div className="text-xs text-black font-medium whitespace-nowrap">
                                             {label}
                                         </div>
                                     )}
-                                    <div className="flex items-center">
+                                    <div className="flex items-center text-black">
                                         {/* <StyledTokenName
                                             className="token-symbol-container"
                                             active={Boolean(currency && currency.symbol)}
                                         > */}
-                                        <div className="text-lg md:text-2xl font-bold">
+                                        <div className="text-lg md:text-2xl font-bold text-black">
                                             {(currency && currency.symbol && currency.symbol.length > 20
                                                 ? currency.symbol.slice(0, 4) +
                                                   '...' +
@@ -250,13 +250,13 @@ export default function CurrencyInputPanel({
                                                       currency.symbol.length
                                                   )
                                                 : currency?.getSymbol(chainId)) || (
-                                                <div className="bg-transparent hover:bg-primary border border-low-emphesis rounded-full px-2 py-1 text-secondary text-xs font-medium mt-1 whitespace-nowrap ">
+                                                <div className="bg-transparent hover:border-high-emphesis hover:text-black border border-low-emphesis rounded-full px-2 py-1 text-secondary text-xs font-medium mt-1 whitespace-nowrap ">
                                                     {t('selectToken')}
                                                 </div>
                                             )}
                                         </div>
                                         {/* </StyledTokenName> */}
-                                        {!disableCurrencySelect && currency && <StyledDropDown selected={!!currency} />}
+                                        {!disableCurrencySelect && currency && <StyledDropDown selected={!!currency} className="fill-current" />}
                                     </div>
                                 </div>
                             )}
@@ -277,7 +277,7 @@ export default function CurrencyInputPanel({
                         </>
                     )} */}
                 </div>
-                <div className="flex items-center rounded bg-dark-900 space-x-3 p-3 w-full sm:w-3/5">
+                <div className="flex items-center rounded bg-gray-200 space-x-3 p-3 w-full sm:w-3/5">
                     {!hideInput && (
                         <>
                             {account && currency && showMaxButton && label !== 'To' && (
@@ -290,7 +290,7 @@ export default function CurrencyInputPanel({
                                 </Button>
                             )}
                             <NumericalInput
-                                className="token-amount-input"
+                                className="token-amount-input text-black"
                                 value={value}
                                 onUserInput={val => {
                                     onUserInput(val)
