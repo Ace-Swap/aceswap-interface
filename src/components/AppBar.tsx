@@ -50,12 +50,13 @@ function AppBar(): JSX.Element {
                                     </div>
                                     <div className="hidden sm:block sm:ml-4">
                                         <div className="flex space-x-2 text-gray-500">
-                                            <NavLink id={`swap-nav-link`} to={'/swap'}>
+                                            <NavLink id={`swap-nav-link`} to={'/swap'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                 {t('swap')}
                                             </NavLink>
                                             <NavLink
                                                 id={`pool-nav-link`}
                                                 to={'/pool'}
+                                                activeClassName="font-bold border-high-emphesis border-solid border-2 rounded"
                                                 isActive={(match, { pathname }) =>
                                                     Boolean(match) ||
                                                     pathname.startsWith('/add') ||
@@ -67,17 +68,17 @@ function AppBar(): JSX.Element {
                                                 {t('pool')}
                                             </NavLink>
                                             {chainId && [ChainId.MAINNET, ChainId.MATIC].includes(chainId) && (
-                                                <NavLink id={`yield-nav-link`} to={'/yield'}>
+                                                <NavLink id={`yield-nav-link`} to={'/yield'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                     Yield
                                                 </NavLink>
                                             )}
                                             {chainId === ChainId.MAINNET && (
-                                                <NavLink id={`sushibar-nav-link`} to={'/sushibar'}>
+                                                <NavLink id={`sushibar-nav-link`} to={'/sushibar'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                     Stake
                                                 </NavLink>
                                             )}
                                             {chainId === ChainId.MAINNET && (
-                                                <NavLink id={`sushibar-nav-link`} to={'/bento/kashi/lend'}>
+                                                <NavLink id={`sushibar-nav-link`} to={'/vesting'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                     Vote
                                                 </NavLink>
                                             )}
@@ -281,7 +282,7 @@ function AppBar(): JSX.Element {
                                             </div>
                                         )}
 
-                                        <Button className="rounded bg-dark-600 hover:bg-dark-800 p-0.5">TEST </Button>
+                                        {/* <Button className="rounded bg-dark-600 hover:bg-dark-800 p-0.5">TEST </Button> */}
                                         <div className="w-auto flex items-center text-white rounded bg-dark-600 hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
                                             {account && chainId && userEthBalance && (
                                                 <>

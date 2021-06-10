@@ -349,7 +349,7 @@ export default function AddLiquidity({
                     {currencies[Field.CURRENCY_B]?.getSymbol(chainId)} POOL
                 </button> */}
             </div>
-            <div className="bg-dark-900 w-full max-w-2xl rounded z-10 shadow-liquidity-purple-glow">
+            <div className="bg-gray-200 shadow-swap-blue-glow w-full max-w-2xl rounded border-high-emphesis border-solid border-2">
                 <Header input={currencies[Field.CURRENCY_A]} output={currencies[Field.CURRENCY_B]} />
                 <Wrapper>
                     <TransactionConfirmationModal
@@ -414,9 +414,9 @@ export default function AddLiquidity({
                                 justify={expertMode ? 'space-between' : 'flex-start'}
                                 style={{ padding: '0 1rem' }}
                             >
-                                <button className="bg-dark-900 rounded-full p-3px m-auto sm:ml-20 -mt-6 -mb-6 z-10">
-                                    <div className="bg-dark-800 hover:bg-dark-700 rounded-full p-3">
-                                        <Plus size="32" color={theme.text2} />
+                                <button className="bg-gray-200 rounded-full p-3px m-auto sm:ml-20 -mt-6 -mb-6 z-10">
+                                    <div className="bg-white rounded-full p-3 border-high-emphesis border-solid border-2">
+                                        <Plus size="32" color="black" />
                                     </div>
                                 </button>
                             </AutoRow>
@@ -456,7 +456,7 @@ export default function AddLiquidity({
                                 <TYPE.main mb="4px">Unsupported Asset</TYPE.main>
                             </ButtonPrimary>
                         ) : !account ? (
-                            <ButtonLight onClick={toggleWalletModal}>Connect Wallet</ButtonLight>
+                            <ButtonPrimary onClick={toggleWalletModal}>Connect Wallet</ButtonPrimary>
                         ) : (
                             <AutoColumn gap={'md'}>
                                 {(approvalA === ApprovalState.NOT_APPROVED ||

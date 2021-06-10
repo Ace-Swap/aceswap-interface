@@ -37,13 +37,13 @@ export default function Yield(): JSX.Element {
             </Helmet>
             <div className="container max-w-2xl mx-auto">
                 <Card
-                    className="h-full bg-dark-900"
+                    className="bg-gray-200 shadow-swap-blue-glow w-full max-w-2xl rounded border-high-emphesis border-solid border-2"
                     header={
-                        <CardHeader className="flex justify-between items-center bg-dark-800">
+                        <CardHeader className="flex justify-between items-center bg-gray-100">
                             <div className="flex w-full justify-between">
                                 <div className="hidden md:flex items-center">
                                     {/* <BackButton defaultRoute="/pool" /> */}
-                                    <div className="text-lg mr-2 whitespace-nowrap">Yield Instruments</div>
+                                    <div className="text-lg mr-2 whitespace-nowrap text-black">Yield Instruments</div>
                                 </div>
                                 <Search search={search} term={term} />
                             </div>
@@ -132,9 +132,9 @@ const TokenBalance = ({ farm }: any) => {
     return (
         <>
             {farm.type === 'SLP' && (
-                <Paper className="bg-dark-800">
+                <Paper className="bg-white">
                     <div
-                        className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm"
+                        className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm bg-white text-black"
                         onClick={() => setExpand(!expand)}
                     >
                         <div className="flex items-center">
@@ -177,9 +177,9 @@ const TokenBalance = ({ farm }: any) => {
                 </Paper>
             )}
             {farm.type === 'KMP' && (
-                <Paper className="bg-dark-800">
+                <Paper className="bg-white text-black">
                     <div
-                        className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm"
+                        className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm bg-white text-black"
                         onClick={() => setExpand(!expand)}
                     >
                         <div className="flex items-center">
@@ -231,9 +231,9 @@ const UserBalance = ({ farm }: any) => {
     return (
         <>
             {farm.type === 'SLP' && (
-                <Paper className="bg-dark-800">
+                <Paper className="bg-white text-black">
                     <div
-                        className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm"
+                        className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm bg-white text-black"
                         onClick={() => setExpand(!expand)}
                     >
                         <div className="flex items-center">
@@ -277,9 +277,9 @@ const UserBalance = ({ farm }: any) => {
                 </Paper>
             )}
             {farm.type === 'KMP' && (
-                <Paper className="bg-dark-800">
+                <Paper className="bg-white text-black">
                     <div
-                        className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm"
+                        className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm bg-white text-black"
                         onClick={() => setExpand(!expand)}
                     >
                         <div className="flex items-center">
