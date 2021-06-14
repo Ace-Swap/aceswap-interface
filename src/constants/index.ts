@@ -3,7 +3,7 @@ import { fortmatic, injected, lattice, portis, torus, walletconnect, walletlink 
 
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
-export const POOL_DENY = ['14', '29', '45', '30']
+export const POOL_DENY = [10000]
 
 // a list of tokens by chain
 type ChainTokenList = {

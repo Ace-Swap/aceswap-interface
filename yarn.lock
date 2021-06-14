@@ -135,9 +135,9 @@
     truffle-flattener "^1.5.0"
 
 "@aceswap/default-token-list@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@aceswap/default-token-list/-/default-token-list-1.0.0.tgz#417f62f3310ee36206048b8185f8ef511aed9f35"
-  integrity sha512-JKqfeJdI3CC6n7ma7R3L6hH7hK+s/KYM1M5VIZDdobKmQckrZ4xddVSbK/7+9BVOUMBM6be/vcBNTnoKVU4Jyg==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@aceswap/default-token-list/-/default-token-list-1.0.1.tgz#5660e1b3780a7942b2b67d734db21fd6fa32b0cd"
+  integrity sha512-KrkJqg1rHb5ZCHJHu2fnQn5hT45U/IobKtIxeid82MKI/MTQ5t5O0aAZCkMvgEBciwKZIp1APN/gW+CQoHqaJQ==
 
 "@aceswap/sdk@^1.0.3":
   version "1.0.7"
@@ -15711,9 +15711,9 @@ postcss@^7, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, po
     supports-color "^6.1.0"
 
 postcss@^8.1.0, postcss@^8.2.1:
-  version "8.3.3"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.3.tgz#ef412a7a67e85c5b2c9f0ab3c4d9e8a3814d55cc"
-  integrity sha512-gnXd9C4bGKevvlNFd80I8WfxHX+g6MR+W2h19PlDNHUuT9248rHTvCIDeZI3Hvs5mB3gzXiNDwVK3S153WJbZA==
+  version "8.3.4"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.4.tgz#41ece1c43f2f7c74dc7d90144047ce052757b822"
+  integrity sha512-/tZY0PXExXXnNhKv3TOvZAOUYRyuqcCbBm2c17YMDK0PlVII3K7/LKdt3ScHL+hhouddjUWi+1sKDf9xXW+8YA==
   dependencies:
     colorette "^1.2.2"
     nanoid "^3.1.23"

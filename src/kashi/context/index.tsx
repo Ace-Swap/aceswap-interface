@@ -111,20 +111,37 @@ async function GetPairs(bentoBoxContract: any, chainId: ChainId) {
         logs = await bentoBoxContract.queryFilter(bentoBoxContract.filters.LogDeploy(masterAddress))
         success = true
     }
-    if (!success) {
-        logs = ((await bentobox.clones({
-            masterAddress,
-            chainId
-        })) as any).map((clone: any) => {
-            return {
-                args: {
-                    masterContract: masterAddress,
-                    cloneAddress: clone.address,
-                    data: clone.data
-                }
-            }
-        })
-    }
+    // Fixed issue
+    // updated codes
+    // if (!success) {
+    //     logs = ((await bentobox.clones({
+    //         masterAddress,
+    //         chainId
+    //     })) as any).map((clone: any) => {
+    //         return {
+    //             args: {
+    //                 masterContract: masterAddress,
+    //                 cloneAddress: clone.address,
+    //                 data: clone.data
+    //             }
+    //         }
+    //     })
+    // }
+    // original codes
+    // if (!success) {
+    //     logs = ((await bentobox.clones({
+    //         masterAddress,
+    //         chainId
+    //     })) as any).map((clone: any) => {
+    //         return {
+    //             args: {
+    //                 masterContract: masterAddress,
+    //                 cloneAddress: clone.address,
+    //                 data: clone.data
+    //             }
+    //         }
+    //     })
+    // }
 
     return logs.map((log: any) => {
         const deployParams = ethers.utils.defaultAbiCoder.decode(
