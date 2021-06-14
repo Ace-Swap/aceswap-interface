@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import MoreInfoSymbol from '../../assets/images/more-info.svg'
-import sushiData from '@aceswap/ace-data'
+import aceData from '@aceswap/ace-data'
 
 export default function APRCard() {
     const [Apr, setApr] = useState<any>()
     useEffect(() => {
         const fetchData = async () => {
             const results = await Promise.all([
-                sushiData.bar.info(),
-                sushiData.exchange.dayData(),
-                sushiData.sushi.priceUSD()
+                aceData.bar.info(),
+                aceData.exchange.dayData(),
+                aceData.ace.priceUSD()
             ])
             const APR =
                 (((results[1][1].volumeUSD * 0.05) / results[0].totalSupply) * 365) / (results[0].ratio * results[2])
