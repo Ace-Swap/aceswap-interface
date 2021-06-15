@@ -106,7 +106,7 @@ const useFarms = () => {
 
                     return {
                         ...pool,
-                        type: 'SLP',
+                        type: 'ALP',
                         symbol: pair.token0.symbol + '-' + pair.token1.symbol,
                         name: pair.token0.name + ' ' + pair.token1.name,
                         pid: Number(pool.id),

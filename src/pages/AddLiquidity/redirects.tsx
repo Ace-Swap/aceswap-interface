@@ -2,7 +2,7 @@ import React from 'react'
 import { Redirect, RouteComponentProps } from 'react-router-dom'
 import AddLiquidity from './index'
 
-import sushiData from '@aceswap/ace-data'
+import aceData from '@aceswap/ace-data'
 
 // note: only for mainnet
 export function RedirectPairToLiquidity({ location }: RouteComponentProps) {
@@ -14,7 +14,7 @@ export function RedirectPairToLiquidity({ location }: RouteComponentProps) {
         return <Redirect to={'/add/'} />
     } else {
         try {
-            //await sushiData.exchange.pair({ pair_address: String(paths?.[1]).toLowerCase() })
+            //await aceData.exchange.pair({ pair_address: String(paths?.[1]).toLowerCase() })
             return <Redirect to={'/add/'} />
         } catch (e) {
             return <Redirect to={'/add/'} />

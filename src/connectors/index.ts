@@ -86,7 +86,7 @@ export const walletconnect = new WalletConnectConnector({
 export const lattice = new LatticeConnector({
     chainId: 1,
     url: RPC[ChainId.MAINNET],
-    appName: 'SushiSwap'
+    appName: 'AceSwap'
 })
 
 // mainnet only
@@ -104,8 +104,8 @@ export const portis = new PortisConnector({
 // mainnet only
 export const walletlink = new WalletLinkConnector({
     url: RPC[ChainId.MAINNET],
-    appName: 'SushiSwap',
-    appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png'
+    appName: 'AceSwap',
+    appLogoUrl: 'https://raw.githubusercontent.com/Ace-Swap/assets/master/blockchains/polygon/assets/0x550d07A5c1591331598E4e3A38a8C32d41EFc7B7/logo.png'
 })
 
 // mainnet only

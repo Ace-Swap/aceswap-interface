@@ -13,7 +13,7 @@ import useSushiBar from '../../hooks/useSushiBar'
 import TransactionFailedModal from './TransactionFailedModal'
 import { Button, Dots } from '../../components'
 
-import sushiData from '@aceswap/ace-data'
+import aceData from '@aceswap/ace-data'
 
 const INPUT_CHAR_LIMIT = 18
 
@@ -60,7 +60,7 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
     const [exchangeRate, setExchangeRate] = useState<any>()
     useEffect(() => {
         const fetchData = async () => {
-            const results = await Promise.all([sushiData.bar.info()])
+            const results = await Promise.all([aceData.bar.info()])
             setExchangeRate(results[0].ratio)
         }
         fetchData()
