@@ -320,10 +320,10 @@ export default function Swap() {
     return (
         <>
             <Helmet>
-                <title>Swap | Sushi</title>
+                <title>Swap | Ace</title>
                 <meta
                     name="description"
-                    content="Sushi allows for swapping of ERC20 compatible tokens across multiple networks"
+                    content="Ace allows for swapping of ERC20 compatible tokens across multiple networks"
                 />
             </Helmet>
             <TokenWarningModal

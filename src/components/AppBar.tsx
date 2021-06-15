@@ -72,7 +72,7 @@ function AppBar(): JSX.Element {
                                                     Yield
                                                 </NavLink>
                                             )}
-                                            {chainId === ChainId.MAINNET && (
+                                            {/* {chainId === ChainId.MAINNET && (
                                                 <NavLink id={`sushibar-nav-link`} to={'/sushibar'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                     Stake
                                                 </NavLink>
@@ -81,7 +81,7 @@ function AppBar(): JSX.Element {
                                                 <NavLink id={`sushibar-nav-link`} to={'/vesting'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
                                                     Vote
                                                 </NavLink>
-                                            )}
+                                            )} */}
                                             {/* {chainId === ChainId.MAINNET && (
                                                 <NavLink id={`sushibar-nav-link`} to={'/sushibar'}>
                                                     SushiBar
@@ -217,7 +217,7 @@ function AppBar(): JSX.Element {
                                                                     type: 'ERC20',
                                                                     options: {
                                                                         address: address,
-                                                                        symbol: 'SUSHI',
+                                                                        symbol: 'ACE',
                                                                         decimals: 18,
                                                                         image:
                                                                             'https://raw.githubusercontent.com/Ace-Swap/assets/master/blockchains/polygon/assets/0x550d07A5c1591331598E4e3A38a8C32d41EFc7B7/logo.png'
@@ -345,7 +345,7 @@ function AppBar(): JSX.Element {
                                         Yield
                                     </NavLink>
                                 )}
-                                {chainId &&
+                                {/* {chainId &&
                                     [ChainId.MAINNET, ChainId.KOVAN, ChainId.BSC, ChainId.MATIC].includes(chainId) && (
                                         <NavLink id={`kashi-nav-link`} to={'/bento/kashi/lend'}>
                                             Kashi Lending
@@ -366,8 +366,8 @@ function AppBar(): JSX.Element {
                                     <NavLink id={`vesting-nav-link`} to={'/vesting'}>
                                         Vesting
                                     </NavLink>
-                                )}
-                                {chainId &&
+                                )} */}
+                                {/* {chainId &&
                                     [
                                         ChainId.MAINNET,
                                         ChainId.BSC,
@@ -381,7 +381,7 @@ function AppBar(): JSX.Element {
                                         >
                                             Analytics
                                         </ExternalLink>
-                                    )}
+                                    )} */}
                             </div>
                         </Disclosure.Panel>
                     </>

@@ -63,7 +63,7 @@ const PARAMS: {
             decimals: 18
         },
         rpcUrls: ['https://rpc-mainnet.maticvigil.com'], //['https://matic-mainnet.chainstacklabs.com/'],
-        blockExplorerUrls: ['https://explorer-mainnet.maticvigil.com']
+        blockExplorerUrls: ['https://polygonscan.com']
     },
     [ChainId.HECO]: {
         chainId: '0x80',
