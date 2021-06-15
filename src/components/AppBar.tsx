@@ -134,7 +134,7 @@ function AppBar(): JSX.Element {
                                             library &&
                                             library.provider.isMetaMask && (
                                                 <>
-                                                    <QuestionHelper text={t('Add xSushi to your Metamask wallet')}>
+                                                    <QuestionHelper text={t('Add xAce to your Metamask wallet')}>
                                                         <div
                                                             className="hidden sm:inline-block rounded-md bg-dark-900 hover:bg-dark-800 cursor-pointer"
                                                             onClick={() => {
@@ -163,7 +163,7 @@ function AppBar(): JSX.Element {
                                                                         .then(success => {
                                                                             if (success) {
                                                                                 console.log(
-                                                                                    'Successfully added XSUSHI to MetaMask'
+                                                                                    'Successfully added XACE to MetaMask'
                                                                                 )
                                                                             } else {
                                                                                 throw new Error('Something went wrong.')
@@ -194,7 +194,7 @@ function AppBar(): JSX.Element {
                                             library &&
                                             library.provider.isMetaMask && (
                                                 <>
-                                                    <QuestionHelper text={t('Add Sushi to your Metamask wallet')}>
+                                                    <QuestionHelper text={t('Add Ace to your Metamask wallet')}>
                                                         <div
                                                             className="hidden sm:inline-block rounded-md bg-dark-900 hover:bg-dark-800 cursor-pointer"
                                                             onClick={() => {
@@ -210,7 +210,7 @@ function AppBar(): JSX.Element {
                                                                         break
                                                                     case ChainId.MATIC:
                                                                         address =
-                                                                            '0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a'
+                                                                            '0x550d07A5c1591331598E4e3A38a8C32d41EFc7B7'
                                                                         break
                                                                 }
                                                                 const params: any = {
@@ -220,7 +220,7 @@ function AppBar(): JSX.Element {
                                                                         symbol: 'SUSHI',
                                                                         decimals: 18,
                                                                         image:
-                                                                            'https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/ethereum/assets/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2/logo.png'
+                                                                            'https://raw.githubusercontent.com/Ace-Swap/assets/master/blockchains/polygon/assets/0x550d07A5c1591331598E4e3A38a8C32d41EFc7B7/logo.png'
                                                                     }
                                                                 }
 
@@ -237,7 +237,7 @@ function AppBar(): JSX.Element {
                                                                         .then(success => {
                                                                             if (success) {
                                                                                 console.log(
-                                                                                    'Successfully added SUSHI to MetaMask'
+                                                                                    'Successfully added ACE to MetaMask'
                                                                                 )
                                                                             } else {
                                                                                 throw new Error('Something went wrong.')

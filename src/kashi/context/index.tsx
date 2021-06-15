@@ -113,20 +113,21 @@ async function GetPairs(bentoBoxContract: any, chainId: ChainId) {
     }
     // Fixed issue
     // updated codes
-    // if (!success) {
-    //     logs = ((await bentobox.clones({
-    //         masterAddress,
-    //         chainId
-    //     })) as any).map((clone: any) => {
-    //         return {
-    //             args: {
-    //                 masterContract: masterAddress,
-    //                 cloneAddress: clone.address,
-    //                 data: clone.data
-    //             }
-    //         }
-    //     })
-    // }
+    if (!success) {
+        // logs = ((await bentobox.clones({
+        //     masterAddress,
+        //     chainId
+        // })) as any).map((clone: any) => {
+        //     return {
+        //         args: {
+        //             masterContract: masterAddress,
+        //             cloneAddress: clone.address,
+        //             data: clone.data
+        //         }
+        //     }
+        // })
+        logs = []
+    }
     // original codes
     // if (!success) {
     //     logs = ((await bentobox.clones({
