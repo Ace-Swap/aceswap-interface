@@ -141,7 +141,7 @@ export default function Modal({
                             >
                                 <div className="w-full rounded p-px">
                                     <div
-                                        className={`flex flex-col h-full w-full bg-gray-200 rounded overflow-y-auto ${
+                                        className={`flex flex-col h-full w-full bg-white rounded overflow-y-auto ${
                                             noPadding ? 'p-0' : 'p-6'
                                         }`}
                                     >

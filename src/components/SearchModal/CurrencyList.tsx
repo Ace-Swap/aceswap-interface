@@ -128,9 +128,10 @@ function CurrencyRow({
         >
             <CurrencyLogo currency={currency} size={'24px'} />
             <Column>
-                <Text title={currency.getName(chainId)} fontWeight={500}>
+                <Text title={currency.getName(chainId)} fontWeight={500} color={'text5'}>
                     {currency.getSymbol(chainId)}
                 </Text>
+                {/* <TYPE.darkGray >{currency.getSymbol(chainId)}</TYPE.darkGray> */}
                 <TYPE.darkGray ml="0px" fontSize={'12px'} fontWeight={300}>
                     {currency.getName(chainId)} {!isOnSelectedList && customAdded && '• Added by user'}
                 </TYPE.darkGray>

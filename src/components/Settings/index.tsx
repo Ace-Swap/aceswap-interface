@@ -72,6 +72,7 @@ const ModalContentWrapper = styled.div`
 const ExtendedMenuFlyout = styled(MenuFlyout)`
     min-width: 22rem;
     margin-right: -20px;
+    background: ${({ theme }) => theme.bg1};
 
     ${({ theme }) => theme.mediaWidth.upToMedium`
         min-width: 20rem;
