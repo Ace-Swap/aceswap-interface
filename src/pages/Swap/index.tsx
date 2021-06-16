@@ -627,7 +627,7 @@ export default function Swap() {
                                 <div className="flex justify-between items-center overflow-hidden">
                                     <img src={PolygonLogo} className="w-24 h-24 absolute top-2" alt="" />
                                     <div className="pl-32">
-                                        <div className="text-white">Check out Sushi on Polygon (Matic)</div>
+                                        <div className="text-white">Check out Ace on Polygon (Matic)</div>
                                         <div className="text-white text-sm">
                                             Click here to switch to Polygon using Metamask
                                         </div>

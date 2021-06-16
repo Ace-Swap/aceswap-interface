@@ -7,17 +7,17 @@ import { ReactComponent as MenuIcon } from '../assets/images/menu.svg'
 const solutions = [
     {
         name: 'Docs',
-        description: 'Documentation for users of Sushi.',
+        description: 'Documentation for users of Ace.',
         href: 'https://docs.sushi.com'
     },
     {
         name: 'Dev',
-        description: 'Documentation for developers of Sushi.',
+        description: 'Documentation for developers of Ace.',
         href: 'https://dev.sushi.com'
     },
     {
         name: 'Open Source',
-        description: 'Sushi is a supporter of Open Source.',
+        description: 'Ace is a supporter of Open Source.',
         href: 'https://github.com/sushiswap'
     },
     {

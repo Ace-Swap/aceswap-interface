@@ -40,7 +40,7 @@ export default function Transactions() {
     return (
         <>
             <Helmet>
-                <title>Transactions | Sushi</title>
+                <title>Transactions | Ace</title>
             </Helmet>
 
             {/* <div className="w-full max-w-2xl">

@@ -43,7 +43,7 @@ export default function Saave() {
     return (
         <>
             <Helmet>
-                <title>Saave | Sushi</title>
+                <title>Saave | Ace</title>
                 <meta name="description" content="Migrate SUSHI -> xSUSHI -> axSUSHI" />
             </Helmet>
             <PageWrapper>

@@ -500,7 +500,7 @@ export default function RemoveLiquidity({
     return (
         <>
             <Helmet>
-                <title>Remove Liquidity | Sushi</title>
+                <title>Remove Liquidity | Ace</title>
             </Helmet>
 
             <div className="w-full max-w-2xl mb-5 px-4">

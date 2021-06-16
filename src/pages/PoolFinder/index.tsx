@@ -79,7 +79,7 @@ export default function PoolFinder() {
     return (
         <>
             <Helmet>
-                <title>Find Pool | Sushi</title>
+                <title>Find Pool | Ace</title>
             </Helmet>
             <div className="relative w-full max-w-lg rounded bg-dark-900 shadow-liquidity-purple-glow">
                 <FindPoolTabs />

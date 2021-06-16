@@ -152,7 +152,7 @@ export default function ClaimModal() {
         <>
             {' '}
             <Helmet>
-                <title>Vesting | Sushi</title>
+                <title>Vesting | Ace</title>
             </Helmet>
             <PageWrapper>
                 <>

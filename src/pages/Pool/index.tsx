@@ -155,7 +155,7 @@ export default function Pool() {
     return (
         <>
             <Helmet>
-                <title>Pool | Sushi</title>
+                <title>Pool | Ace</title>
             </Helmet>
             <div className="bg-gray-200 shadow-swap-blue-glow w-full max-w-2xl rounded border-high-emphesis border-solid border-2">
                 <ExchangeHeader />

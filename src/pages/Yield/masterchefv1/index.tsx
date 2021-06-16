@@ -32,8 +32,8 @@ export default function Yield(): JSX.Element {
     return (
         <>
             <Helmet>
-                <title>Yield | Sushi</title>
-                <meta name="description" content="Farm SUSHI by staking LP (Liquidity Provider) tokens" />
+                <title>Yield | Ace</title>
+                <meta name="description" content="Farm ACE by staking LP (Liquidity Provider) tokens" />
             </Helmet>
             <div className="container max-w-2xl mx-auto">
                 <Card

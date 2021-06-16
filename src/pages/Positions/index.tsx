@@ -27,7 +27,7 @@ export default function Positions() {
     return (
         <>
             <Helmet>
-                <title>Positions | Sushi</title>
+                <title>Positions | Ace</title>
             </Helmet>
 
             {/* <div className="w-full max-w-2xl">

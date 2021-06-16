@@ -7,10 +7,10 @@ export default function TradeLayout() {
     return (
         <>
             <Helmet>
-                <title>Trade | Sushi</title>
+                <title>Trade | Ace</title>
                 <meta
                     name="description"
-                    content="Sushi allows for swapping of ERC20 compatible tokens across multiple networks"
+                    content="Ace allows for swapping of ERC20 compatible tokens across multiple networks"
                 />
             </Helmet>
             <div className="w-full">

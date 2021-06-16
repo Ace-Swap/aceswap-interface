@@ -48,7 +48,7 @@ const useMaker = () => {
         }
     }, [addTransaction, saaveContract?.address, sushiContract])
 
-    // Saave Sushi - xSUSHI - aXSUSHI
+    // Saave Ace - xSUSHI - aXSUSHI
     const saave = useCallback(
         async (amount: BalanceProps | undefined) => {
             if (amount?.value) {

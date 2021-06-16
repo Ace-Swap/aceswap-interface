@@ -106,7 +106,7 @@ export default function BorrowPair({
         >
             <Helmet>
                 <title>
-                    Borrow {pair?.asset?.symbol}-{pair?.collateral?.symbol} | Sushi
+                    Borrow {pair?.asset?.symbol}-{pair?.collateral?.symbol} | Ace
                 </title>
             </Helmet>
             <Card

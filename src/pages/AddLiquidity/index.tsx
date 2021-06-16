@@ -327,7 +327,7 @@ export default function AddLiquidity({
     return (
         <>
             <Helmet>
-                <title>Add Liquidity | Sushi</title>
+                <title>Add Liquidity | Ace</title>
             </Helmet>
             <div className="w-full max-w-2xl mb-5 px-4">
                 <NavLink

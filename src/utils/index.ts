@@ -267,12 +267,12 @@ const builders = {
     },
 
     matic: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
-        const prefix = `https://explorer-${chainName}.maticvigil.com`
+        const prefix = `https://polygonscan.com`
         switch (type) {
             case 'transaction':
                 return `${prefix}/tx/${data}`
             case 'token':
-                return `${prefix}/tokens/${data}`
+                return `${prefix}/token/${data}`
             default:
                 return `${prefix}/${type}/${data}`
         }

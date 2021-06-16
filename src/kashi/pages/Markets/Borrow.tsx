@@ -46,7 +46,7 @@ export default function BorrowMarkets(): JSX.Element {
             }
         >
             <Helmet>
-                <title>Borrow | Sushi</title>
+                <title>Borrow | Ace</title>
             </Helmet>
             <Card className="h-full bg-dark-900" header={<MarketHeader type="Borrow" lists={[pairs, positions]} />}>
                 {positions.items && positions.items.length > 0 && (
