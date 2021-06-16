@@ -138,7 +138,7 @@ const CreatePair = () => {
             >
                 <div className="space-y-6">
                     <p>
-                        Currently only Chainlink oracles are available. Support for more oracles, such as SushiSwap
+                        Currently only Chainlink oracles are available. Support for more oracles, such as AceSwap
                         on-chain time weighted average pricing (TWAP) oracles will be added later.
                     </p>
                     <ListBox

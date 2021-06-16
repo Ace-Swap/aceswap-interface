@@ -250,7 +250,7 @@ const MigrateButtons = ({ state, exchange }: { state: MigrateState; exchange: st
                 <div className="text-red text-center font-medium">{error.message}</div>
             )}
             <div className="text-sm text-low-emphesis text-center">
-                {`Your ${exchange} ${state.selectedLPToken.tokenA.symbol}/${state.selectedLPToken.tokenB.symbol} liquidity will become SushiSwap ${state.selectedLPToken.tokenA.symbol}/${state.selectedLPToken.tokenB.symbol} liquidity.`}
+                {`Your ${exchange} ${state.selectedLPToken.tokenA.symbol}/${state.selectedLPToken.tokenB.symbol} liquidity will become AceSwap ${state.selectedLPToken.tokenA.symbol}/${state.selectedLPToken.tokenB.symbol} liquidity.`}
             </div>
         </div>
     )
@@ -320,7 +320,7 @@ const MigrateV2 = () => {
                 {/* <div className="flex justify-between items-center p-3">
                     <BackArrow to="/pool" />
                     <div>Select your wallet</div>
-                    <QuestionHelper text={`Migrate your ${exchange} LP tokens to SushiSwap LP tokens.`} />
+                    <QuestionHelper text={`Migrate your ${exchange} LP tokens to AceSwap LP tokens.`} />
                 </div> */}
                 {!account ? (
                     <Typography variant="body" className="text-primary text-center p-4">
