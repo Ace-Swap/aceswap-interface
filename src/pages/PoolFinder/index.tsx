@@ -81,10 +81,10 @@ export default function PoolFinder() {
             <Helmet>
                 <title>Find Pool | Ace</title>
             </Helmet>
-            <div className="relative w-full max-w-lg rounded bg-dark-900 shadow-liquidity-purple-glow">
+            <div className="relative w-full max-w-lg bg-gray-200 shadow-liquidity-purple-glow rounded border-high-emphesis border-solid border-2">
                 <FindPoolTabs />
                 <AutoColumn style={{ padding: '1rem' }} gap="md">
-                    <BlueCard>
+                    <BlueCard className="bg-white">
                         <AutoColumn gap="10px">
                             <TYPE.link fontWeight={400} color={'primaryText1'}>
                                 <b>Tip:</b> Use this tool to find pairs that don&apos;t automatically appear in the
@@ -97,6 +97,7 @@ export default function PoolFinder() {
                             setShowSearch(true)
                             setActiveField(Fields.TOKEN0)
                         }}
+                        className="bg-white"
                     >
                         {currency0 ? (
                             <Row>
@@ -121,6 +122,7 @@ export default function PoolFinder() {
                             setShowSearch(true)
                             setActiveField(Fields.TOKEN1)
                         }}
+                        className="bg-white"
                     >
                         {currency1 ? (
                             <Row>
