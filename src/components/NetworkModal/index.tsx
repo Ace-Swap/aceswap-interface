@@ -139,9 +139,9 @@ export default function NetworkModal(): JSX.Element | null {
 
             <div className="flex flex-col space-y-5 overflow-y-auto">
                 {[
-                    ChainId.MAINNET,
+                    // ChainId.MAINNET,
                     // ChainId.FANTOM,
-                    ChainId.BSC,
+                    // ChainId.BSC,
                     ChainId.MATIC,
                     // ChainId.HECO,
                     // ChainId.XDAI,
