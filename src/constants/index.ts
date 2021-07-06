@@ -49,6 +49,17 @@ export const SUSHI: ChainTokenMap = {
     [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0xae75A438b2E0cB8Bb01Ec1E1e376De11D44477CC', 18, 'SUSHI', 'SushiToken')
 }
 
+// ACE
+export const ACE: ChainTokenMap = {
+    [ChainId.MATIC]: new Token(
+        ChainId.MATIC,
+        '0x550d07A5c1591331598E4e3A38a8C32d41EFc7B7',
+        18,
+        'ACE',
+        'AceToken'
+    )
+}
+
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
     // [UNI_ADDRESS]: 'UNI',
     [TIMELOCK_ADDRESS]: 'Timelock'

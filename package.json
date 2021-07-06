@@ -1,7 +1,7 @@
 {
     "name": "@aceswap/interface",
     "description": "AceSwap Interface",
-    "homepage": "https://app.ace.com",
+    "homepage": "https://aceswap.finance",
     "private": true,
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
@@ -11,10 +11,10 @@
         "*.{md,css}": "prettier --write"
     },
     "devDependencies": {
-        "@aceswap/ace-data": "^1.0.26",
+        "@aceswap/ace-data": "^1.1.2",
         "@aceswap/core": "^1.0.0",
         "@aceswap/default-token-list": "^1.0.0",
-        "@aceswap/sdk": "^1.0.3",
+        "@aceswap/sdk": "^1.1.1",
         "@apollo/client": "^3.2.0",
         "@apollo/react-components": "^3.1.5",
         "@apollo/react-hooks": "^3.1.5",
