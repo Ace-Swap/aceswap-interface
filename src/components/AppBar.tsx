@@ -265,13 +265,13 @@ function AppBar(): JSX.Element {
                                         {chainId && chainId === ChainId.MATIC && (
                                             <div className="hidden sm:inline-block">
                                                 <a
-                                                    className="flex items-center rounded bg-dark-900 hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto"
+                                                    className="flex items-center rounded bg-transparent border-low-emphesis border hover:border-high-emphesis p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto"
                                                     href="https://wallet.matic.network/bridge/"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 >
-                                                    <div className="grid grid-flow-col auto-cols-max items-center rounded-lg bg-dark-1000 text-sm text-secondary py-2 px-3 pointer-events-auto">
-                                                        <div className="text-primary">Bridge Assets</div>
+                                                    <div className="grid grid-flow-col auto-cols-max items-center text-sm py-2 px-3 pointer-events-auto">
+                                                        <div className="text-secondary hover:text-black">Bridge Assets</div>
                                                     </div>
                                                 </a>
                                             </div>
@@ -283,7 +283,7 @@ function AppBar(): JSX.Element {
                                         )}
 
                                         {/* <Button className="rounded bg-dark-600 hover:bg-dark-800 p-0.5">TEST </Button> */}
-                                        <div className="w-auto flex items-center text-white rounded p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
+                                        <div className="w-auto flex items-center rounded p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto">
                                             {account && chainId && userEthBalance && (
                                                 <>
                                                     <div className="py-2 px-3 text-primary text-bold">

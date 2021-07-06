@@ -192,7 +192,7 @@ function Web3StatusInner() {
         return (
             <div
                 id="web3-status-connected"
-                className="flex items-center rounded-lg bg-dark-1000 text-sm text-secondary py-2 px-3"
+                className="flex items-center rounded-lg text-sm text-secondary py-2 px-3 bg-transparent border-low-emphesis border hover:border-high-emphesis"
                 onClick={toggleWalletModal}
             >
                 {hasPendingTransactions ? (
@@ -200,7 +200,7 @@ function Web3StatusInner() {
                         <div className="pr-2">{pending?.length} Pending</div> <Loader stroke="white" />
                     </div>
                 ) : (
-                    <div className="mr-2">{ENSName || shortenAddress(account)}</div>
+                    <div className="mr-2 hover:text-black">{ENSName || shortenAddress(account)}</div>
                 )}
                 {!hasPendingTransactions && connector && <StatusIcon connector={connector} />}
             </div>
