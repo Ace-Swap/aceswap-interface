@@ -14,7 +14,7 @@
         "@aceswap/ace-data": "^1.1.2",
         "@aceswap/core": "^1.0.0",
         "@aceswap/default-token-list": "^1.0.0",
-        "@aceswap/sdk": "^1.1.1",
+        "@aceswap/sdk": "^1.1.2",
         "@apollo/client": "^3.2.0",
         "@apollo/react-components": "^3.1.5",
         "@apollo/react-hooks": "^3.1.5",
