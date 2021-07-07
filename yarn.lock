@@ -110,10 +110,10 @@
     ethers "~4.0.4"
     lodash "^4.17.11"
 
-"@aceswap/ace-data@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@aceswap/ace-data/-/ace-data-1.1.2.tgz#c2b53bf99c678344ef6e06617e6c622c1072b3bd"
-  integrity sha512-tkHP1zrfkekP3bNgqgzRf0vNYTuZhH9FtCvyDrqiWjIzCLOdsFSSmIn6t/QXBFMN3PEPnineP5bm6E8JtP4bNQ==
+"@aceswap/ace-data@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@aceswap/ace-data/-/ace-data-1.1.4.tgz#197fe74a019c7a1f3eb8edaf35f4b2ee99a95c05"
+  integrity sha512-zxuce/RGHg611YTd8+1VofqfQeGulCFEYpTbFRWVp1yvQqd6VeBsbbtJNxszIKYNKsXTX0ZE++kjxRzsx63cGA==
   dependencies:
     bluebird "^3.7.2"
     commander "6.1.0"
@@ -139,10 +139,10 @@
   resolved "https://registry.yarnpkg.com/@aceswap/default-token-list/-/default-token-list-1.0.1.tgz#5660e1b3780a7942b2b67d734db21fd6fa32b0cd"
   integrity sha512-KrkJqg1rHb5ZCHJHu2fnQn5hT45U/IobKtIxeid82MKI/MTQ5t5O0aAZCkMvgEBciwKZIp1APN/gW+CQoHqaJQ==
 
-"@aceswap/sdk@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@aceswap/sdk/-/sdk-1.1.1.tgz#a0586608442638718800c42723d41a6b2bf3f2a0"
-  integrity sha512-iCECSoHmA9+13nanY937VP0nMUwOcI9M3cXhyDwbD+6kjtbXA5m1U5UFKVOa7Jg9ilaozP/ftuwy3Bq+QuupoQ==
+"@aceswap/sdk@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@aceswap/sdk/-/sdk-1.1.2.tgz#166c36b5b196607b450fec287817c18402a62a74"
+  integrity sha512-zv/8itEuLCWFD406ddUpTDIs9+Zbgpcgiu4f/ECd6p2TFrAas9L/rMkLG7K+YuRLtIGrvXZsSCyK4lKAzQdusA==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
@@ -10436,9 +10436,9 @@ graph-results-pager@LufyCZ/graph-results-pager#types:
   dependencies:
     node-fetch "2.6.1"
 
-"graph-results-pager@https://github.com/LufyCZ/graph-results-pager":
+"graph-results-pager@git+https://github.com/LufyCZ/graph-results-pager.git":
   version "1.0.3"
-  resolved "https://github.com/LufyCZ/graph-results-pager#9b230f05b8d79aeedc9e167ac5a1fea33e04d51f"
+  resolved "git+https://github.com/LufyCZ/graph-results-pager.git#9b230f05b8d79aeedc9e167ac5a1fea33e04d51f"
   dependencies:
     node-fetch "2.6.1"
 

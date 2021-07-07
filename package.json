@@ -11,7 +11,7 @@
         "*.{md,css}": "prettier --write"
     },
     "devDependencies": {
-        "@aceswap/ace-data": "^1.1.2",
+        "@aceswap/ace-data": "^1.1.4",
         "@aceswap/core": "^1.0.0",
         "@aceswap/default-token-list": "^1.0.0",
         "@aceswap/sdk": "^1.1.2",
