@@ -10,7 +10,7 @@ export const blocklytics = new ApolloClient({
 
 export const masterchef = new ApolloClient({
     link: createHttpLink({
-        uri: 'https://api.thegraph.com/subgraphs/name/sushiswap/master-chef'
+        uri: 'https://api.thegraph.com/subgraphs/name/aceswap/master-chef'
     }),
     cache: new InMemoryCache(),
     shouldBatch: true
@@ -18,7 +18,7 @@ export const masterchef = new ApolloClient({
 
 export const minichefv2_matic = new ApolloClient({
     link: createHttpLink({
-        uri: 'https://api.thegraph.com/subgraphs/name/sushiswap/matic-minichef'
+        uri: 'https://api.thegraph.com/subgraphs/name/aceswap/master-chef'
     }),
     cache: new InMemoryCache(),
     shouldBatch: true,
@@ -40,7 +40,7 @@ export const client = new ApolloClient({
 
 export const exchange = new ApolloClient({
     link: createHttpLink({
-        uri: 'https://api.thegraph.com/subgraphs/name/matthewlilley/exchange'
+        uri: 'https://api.thegraph.com/subgraphs/name/aceswap/matic-exchange'
     }),
     cache: new InMemoryCache(),
     shouldBatch: true
@@ -48,7 +48,7 @@ export const exchange = new ApolloClient({
 
 export const exchange_matic = new ApolloClient({
     link: createHttpLink({
-        uri: 'https://api.thegraph.com/subgraphs/name/sushiswap/matic-exchange'
+        uri: 'https://api.thegraph.com/subgraphs/name/aceswap/matic-exchange'
     }),
     cache: new InMemoryCache(),
     defaultOptions: {

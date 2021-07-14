@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 //import { FACTORY_ADDRESS, BUNDLE_ID } from '../constants'
 
-const FACTORY_ADDRESS = '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac'
+const FACTORY_ADDRESS = '0x87DB33328Db19Be0f5610D8ed7a1aB64f1BD1242'
 const BUNDLE_ID = '1'
 
 export const tokenFieldsQuery = gql`
@@ -46,12 +46,12 @@ export const miniChefPoolQuery = gql`
             }
             allocPoint
             lastRewardTime
-            accSushiPerShare
+            accAcePerShare
             slpBalance
             userCount
             miniChef {
                 id
-                sushiPerSecond
+                acePerSecond
                 totalAllocPoint
             }
         }
@@ -70,12 +70,12 @@ export const poolsQuery = gql`
             pair
             allocPoint
             lastRewardBlock
-            accSushiPerShare
+            accAcePerShare
             balance
             userCount
             owner {
                 id
-                sushiPerBlock
+                acePerBlock
                 totalAllocPoint
             }
         }
@@ -187,7 +187,7 @@ export const liquidityPositionSubsetQuery = gql`
     }
 `
 
-export const SUSHI_PAIRS = (ids, masterChefAddress) => {
+export const ACE_PAIRS = (ids, masterChefAddress) => {
     const queryString = `query pools {
     pairs(where: {id_in: ${JSON.stringify(ids)}}) {
         id
@@ -231,17 +231,17 @@ const poolUserFragment = gql`
             id
             pair
             balance
-            accSushiPerShare
+            accAcePerShare
             lastRewardBlock
         }
         amount
         rewardDebt
         entryUSD
         exitUSD
-        sushiHarvested
-        sushiHarvestedUSD
-        sushiHarvestedSinceLockup
-        sushiHarvestedSinceLockupUSD
+        aceHarvested
+        aceHarvestedUSD
+        aceHarvestedSinceLockup
+        aceHarvestedSinceLockupUSD
     }
 `
 
