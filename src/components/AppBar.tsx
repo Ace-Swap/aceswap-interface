@@ -174,7 +174,7 @@ function AppBar(): JSX.Element {
                                                             }}
                                                         >
                                                             <img
-                                                                src={xSushi}
+                                                                src={Logo}
                                                                 alt="Switch Network"
                                                                 style={{
                                                                     minWidth: 36,
@@ -248,7 +248,7 @@ function AppBar(): JSX.Element {
                                                             }}
                                                         >
                                                             <img
-                                                                src={Sushi}
+                                                                src={Logo}
                                                                 alt="Switch Network"
                                                                 style={{
                                                                     minWidth: 36,
