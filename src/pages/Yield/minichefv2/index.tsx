@@ -224,7 +224,7 @@ const TokenBalance = ({ farm }: any) => {
                             <div>
                                 {/* <div className="text-right">{formattedNum(farm.tvl, true)} </div> */}
                                 <div className="text-gray-500 text-right font-semibold text-sm sm:text-sm">
-                                    {formattedNum(farm.slpBalance / 1e18, false)} SLP
+                                    {formattedNum(farm.alpBalance / 1e18, false)} ALP
                                 </div>
                                 <div className="text-gray-500 text-right text-xs">Market Staked</div>
                             </div>

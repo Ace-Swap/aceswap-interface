@@ -45,14 +45,14 @@ const useFarms = () => {
 
         const liquidityPositions = results[1]?.data.liquidityPositions
         const averageBlockTime = results[2]
-        const acePrice = results[3]
+        const acePrice = results[3] || 0.001
+        console.log('acePrice: ', acePrice)
         // const kashiPairs = results[4].filter(result => result !== undefined) // filter out undefined (not in onsen) from all kashiPairs
 
         //console.log('kashiPairs:', kashiPairs)
 
         const pairs = pairsQuery?.data.pairs
         // const KASHI_PAIRS = _.range(190, 230, 1) // kashiPair pids 189-229
-        //console.log('kashiPairs:', KASHI_PAIRS, kashiPairs, pools)
 
         const farms = pools
             .filter((pool: any) => {
@@ -88,7 +88,7 @@ const useFarms = () => {
                         name: pair.token0.name + ' ' + pair.token1.name,
                         pid: Number(pool.id),
                         pairAddress: pair.id,
-                        slpBalance: pool.balance,
+                        alpBalance: pool.balance,
                         liquidityPair: pair,
                         roiPerBlock,
                         roiPerHour,
@@ -103,60 +103,57 @@ const useFarms = () => {
                 }
             })
 
-        console.log('farms:', farms)
         const sorted = _.orderBy(farms, ['pid'], ['desc'])
 
-        const pids = sorted.map(pool => {
+        const pids = sorted.map((pool: { pid: any }) => {
             return pool.pid
         })
 
-        // if (account) {
-        //     const userFarmDetails = await boringHelperContract?.pollPools(account, pids)
-        //     console.log('userFarmDetails:', userFarmDetails)
-        //     const userFarms = userFarmDetails
-        //         .filter((farm: any) => {
-        //             return farm.balance.gt(BigNumber.from(0)) || farm.pending.gt(BigNumber.from(0))
-        //         })
-        //         .map((farm: any) => {
-        //             //console.log('userFarm:', farm.pid.toNumber(), farm)
+        if (account) {
+            const userFarmDetails = await boringHelperContract?.pollPools(account, pids)
+            console.log('userFarmDetails:', userFarmDetails)
+            const userFarms = userFarmDetails
+                .filter((farm: any) => {
+                    return farm.balance.gt(BigNumber.from(0)) || farm.pending.gt(BigNumber.from(0))
+                })
+                .map((farm: any) => {
+                    console.log('userFarm:', farm.pid.toNumber(), farm)
 
-        //             const pid = farm.pid.toNumber()
-        //             const farmDetails = sorted.find((pair: any) => pair.pid === pid)
+                    const pid = farm.pid.toNumber()
+                    const farmDetails = sorted.find((pair: any) => pair.pid === pid)
 
-        //             console.log('farmDetails:', farmDetails)
-        //             let deposited
-        //             let depositedUSD
-        //             if (farmDetails && farmDetails.type === 'KMP') {
-        //                 deposited = Fraction.from(
-        //                     farm.balance,
-        //                     BigNumber.from(10).pow(farmDetails.liquidityPair.asset.decimals)
-        //                 ).toString()
-        //                 depositedUSD =
-        //                     farmDetails.totalAssetStaked && farmDetails.totalAssetStaked > 0
-        //                         ? (Number(deposited) * Number(farmDetails.tvl)) / farmDetails.totalAssetStaked
-        //                         : 0
-        //             } else {
-        //                 deposited = Fraction.from(farm.balance, BigNumber.from(10).pow(18)).toString(18)
-        //                 depositedUSD =
-        //                     farmDetails.slpBalance && Number(farmDetails.slpBalance / 1e18) > 0
-        //                         ? (Number(deposited) * Number(farmDetails.tvl)) / (farmDetails.slpBalance / 1e18)
-        //                         : 0
-        //             }
-        //             const pending = Fraction.from(farm.pending, BigNumber.from(10).pow(18)).toString(18)
+                    let deposited
+                    let depositedUSD
+                    if (farmDetails && farmDetails.type === 'KMP') {
+                        deposited = Fraction.from(
+                            farm.balance,
+                            BigNumber.from(10).pow(farmDetails.liquidityPair.asset.decimals)
+                        ).toString()
+                        depositedUSD =
+                            farmDetails.totalAssetStaked && farmDetails.totalAssetStaked > 0
+                                ? (Number(deposited) * Number(farmDetails.tvl)) / farmDetails.totalAssetStaked
+                                : 0
+                    } else {
+                        deposited = Fraction.from(farm.balance, BigNumber.from(10).pow(18)).toString(18)
+                        depositedUSD =
+                            farmDetails.alpBalance && Number(farmDetails.alpBalance / 1e18) > 0
+                                ? (Number(deposited) * Number(farmDetails.tvl)) / (farmDetails.alpBalance / 1e18)
+                                : 0
+                    }
+                    const pending = Fraction.from(farm.pending, BigNumber.from(10).pow(18)).toString(18)
 
-        //             return {
-        //                 ...farmDetails,
-        //                 type: farmDetails.type, // KMP or SLP
-        //                 depositedLP: deposited,
-        //                 depositedUSD: depositedUSD,
-        //                 pendingAce: pending
-        //             }
-        //         })
-        //     setFarms({ farms: sorted, userFarms: userFarms })
-        //     console.log('userFarms:', userFarms)
-        // } else {
+                    return {
+                        ...farmDetails,
+                        type: farmDetails.type, // KMP or ALP
+                        depositedLP: deposited,
+                        depositedUSD: depositedUSD,
+                        pendingAce: pending
+                    }
+                })
+            setFarms({ farms: sorted, userFarms: userFarms })
+        } else {
             setFarms({ farms: sorted, userFarms: [] })
-        // }
+        }
     }, [account, boringHelperContract])
 
     useEffect(() => {

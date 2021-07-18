@@ -47,7 +47,7 @@ export const miniChefPoolQuery = gql`
             allocPoint
             lastRewardTime
             accAcePerShare
-            slpBalance
+            alpBalance
             userCount
             miniChef {
                 id

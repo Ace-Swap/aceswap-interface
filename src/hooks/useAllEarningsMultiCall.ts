@@ -18,7 +18,7 @@ export function useAllPendingSushi(): number {
         [numberOfPools, account]
     )
 
-    const data = useSingleContractMultipleData(masterChef, 'pendingSushi', args)
+    const data = useSingleContractMultipleData(masterChef, 'pendingAce', args)
 
     return useMemo(
         () =>

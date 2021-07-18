@@ -99,7 +99,7 @@ const useFarms = () => {
 
                 const totalAllocPoint = 1000 //pool.miniChef.totalAllocPoint
 
-                const balance = Number(pool.slpBalance / 1e18)
+                const balance = Number(pool.alpBalance / 1e18)
                 const balanceUSD = (balance / Number(pair.totalSupply)) * Number(pair.reserveUSD)
 
                 const rewardPerSecond = ((pool.allocPoint / totalAllocPoint) * pool.miniChef.acePerSecond) / 1e18
@@ -136,7 +136,7 @@ const useFarms = () => {
                 }
                 //const roiPerYear = (1 + ((roiPerDay + feeFactorAnnualized / 365) * 365) / 365) ** 365 - 1 // compounding daily APY
                 //const roiPerYear = roiPerMonth * 12
-                //console.log('pool:', pool.slpBalance)
+                //console.log('pool:', pool.alpBalance)
                 //console.log(pair.token0.symbol + '-' + pair.token1.symbol, roiPerYear)
 
                 return {
@@ -146,7 +146,7 @@ const useFarms = () => {
                     name: pair.token0.name + ' ' + pair.token1.name,
                     pid: Number(pool.id),
                     pairAddress: pair.id,
-                    slpBalance: pool.slpBalance,
+                    alpBalance: pool.alpBalance,
                     liquidityPair: pair,
                     rewardTokens: [
                         '0x550d07A5c1591331598E4e3A38a8C32d41EFc7B7', //ACE on Matic
@@ -187,8 +187,8 @@ const useFarms = () => {
         //             const farmDetails = sorted.find((pair: any) => pair.pid === pid)
         //             const deposited = Fraction.from(farm.balance, BigNumber.from(10).pow(18)).toString(18)
         //             const depositedUSD =
-        //                 farmDetails.slpBalance && Number(farmDetails.slpBalance / 1e18) > 0
-        //                     ? (Number(deposited) * Number(farmDetails.tvl)) / (farmDetails.slpBalance / 1e18)
+        //                 farmDetails.alpBalance && Number(farmDetails.alpBalance / 1e18) > 0
+        //                     ? (Number(deposited) * Number(farmDetails.tvl)) / (farmDetails.alpBalance / 1e18)
         //                     : 0
         //             const pending = Fraction.from(farm.pending, BigNumber.from(10).pow(18)).toString(18)
 

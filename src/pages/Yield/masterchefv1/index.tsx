@@ -131,7 +131,7 @@ const TokenBalance = ({ farm }: any) => {
     const [expand, setExpand] = useState<boolean>(false)
     return (
         <>
-            {farm.type === 'SLP' && (
+            {farm.type === 'ALP' && (
                 <Paper className="bg-white">
                     <div
                         className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm bg-white text-black"
@@ -154,7 +154,7 @@ const TokenBalance = ({ farm }: any) => {
                             <div>
                                 <div className="text-right">{formattedNum(farm.tvl, true)} </div>
                                 <div className="text-secondary text-right">
-                                    {formattedNum(farm.slpBalance / 1e18, false)} SLP
+                                    {formattedNum(farm.alpBalance / 1e18, false)} ALP
                                 </div>
                             </div>
                         </div>
@@ -230,7 +230,7 @@ const UserBalance = ({ farm }: any) => {
     const [expand, setExpand] = useState<boolean>(false)
     return (
         <>
-            {farm.type === 'SLP' && (
+            {farm.type === 'ALP' && (
                 <Paper className="bg-white text-black">
                     <div
                         className="grid grid-cols-3 py-4 px-4 cursor-pointer select-none rounded text-sm bg-white text-black"
@@ -259,7 +259,7 @@ const UserBalance = ({ farm }: any) => {
                         </div>
                         <div className="flex justify-end items-center">
                             <div>
-                                <div className="text-right">{formattedNum(farm.pendingSushi)} </div>
+                                <div className="text-right">{formattedNum(farm.pendingAce)} </div>
                                 <div className="text-secondary text-right">SUSHI</div>
                             </div>
                         </div>
@@ -304,8 +304,8 @@ const UserBalance = ({ farm }: any) => {
                         </div>
                         <div className="flex justify-end items-center">
                             <div>
-                                <div className="text-right">{formattedNum(farm.pendingSushi)} </div>
-                                <div className="text-secondary text-right">SUSHI</div>
+                                <div className="text-right">{formattedNum(farm.pendingAce)} </div>
+                                <div className="text-secondary text-right">ACE</div>
                             </div>
                         </div>
                     </div>
