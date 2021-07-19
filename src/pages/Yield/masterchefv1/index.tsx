@@ -128,6 +128,7 @@ export default function Yield(): JSX.Element {
 }
 
 const TokenBalance = ({ farm }: any) => {
+    console.log('======= ', farm)
     const [expand, setExpand] = useState<boolean>(false)
     return (
         <>
@@ -253,14 +254,14 @@ const UserBalance = ({ farm }: any) => {
                             <div>
                                 <div className="text-right">{formattedNum(farm.depositedUSD, true)} </div>
                                 <div className="text-secondary text-right">
-                                    {formattedNum(farm.depositedLP, false)} SLP
+                                    {formattedNum(farm.depositedLP, false)} ALP
                                 </div>
                             </div>
                         </div>
                         <div className="flex justify-end items-center">
                             <div>
                                 <div className="text-right">{formattedNum(farm.pendingAce)} </div>
-                                <div className="text-secondary text-right">SUSHI</div>
+                                <div className="text-secondary text-right">ACE</div>
                             </div>
                         </div>
                     </div>

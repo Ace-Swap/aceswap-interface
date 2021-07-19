@@ -254,7 +254,7 @@ export const USD_CURRENCY: { [chainId in ChainId]?: Currency } = {
 }
 
 export function getCurrency(chainId: ChainId | void): Currency {
-    return USD_CURRENCY[chainId || 1] || { address: ethers.constants.AddressZero, decimals: 18 }
+    return USD_CURRENCY[chainId || 137] || { address: ethers.constants.AddressZero, decimals: 18 }
 }
 
 export * from './chainlink'

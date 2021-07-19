@@ -92,7 +92,7 @@ export class KashiCooker {
         this.pair = pair
         this.account = account || ethers.constants.AddressZero
         this.library = library
-        this.chainId = chainId || 1
+        this.chainId = chainId || 137
 
         this.actions = []
         this.values = []

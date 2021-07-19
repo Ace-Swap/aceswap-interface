@@ -21,7 +21,7 @@ const CreatePair = () => {
     const bentoBoxContract = useBentoBoxContract()
     const addTransaction = useTransactionAdder()
 
-    const tokens: ChainlinkToken[] = CHAINLINK_TOKENS[chainId || 1] || []
+    const tokens: ChainlinkToken[] = CHAINLINK_TOKENS[chainId || 137] || []
     const empty = { symbol: '', name: 'Select a token', address: '0', decimals: 0 }
     const [selectedAsset, setSelectedAsset] = useState(empty)
     const [selectedCollateral, setSelectedCollateral] = useState(empty)
@@ -33,7 +33,7 @@ const CreatePair = () => {
     }, [selectedAsset])
 
     const getOracleData = (asset: any, collateral: any) => {
-        const mapping = CHAINLINK_MAPPING[chainId || 1] || {}
+        const mapping = CHAINLINK_MAPPING[chainId || 137] || {}
         for (const address in mapping) {
             mapping[address].address = address
         }

@@ -56,8 +56,8 @@ export default function InputGroup({
     //console.log('pending:', pending, pid)
 
     const [approvalState, approve] = useApproveCallback(
-        tryParseAmount(depositValue, new Token(chainId || 1, pairAddressChecksum, balance.decimals, pairSymbol, '')),
-        MASTERCHEF_ADDRESS[1]
+        tryParseAmount(depositValue, new Token(chainId || 137, pairAddressChecksum, balance.decimals, pairSymbol, '')),
+        MASTERCHEF_ADDRESS[chainId || 137]
     )
 
     const { deposit, withdraw, harvest } = useMasterChef()

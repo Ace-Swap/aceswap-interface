@@ -45,7 +45,7 @@ export default function Repay({ pair }: RepayProps) {
     const collateralToken = useCurrency(pair.collateral.address) || undefined
 
     // Calculated
-    const assetNative = WETH[chainId || 1].address === pair.asset.address
+    const assetNative = WETH[chainId || 137].address === pair.asset.address
 
     const balance = useBentoRepay
         ? toAmount(pair.asset, pair.asset.bentoBalance)
@@ -212,7 +212,7 @@ export default function Repay({ pair }: RepayProps) {
             cooker.removeCollateral(pair.userCollateralShare, true)
             cooker.bentoTransferCollateral(
                 pair.userCollateralShare,
-                SUSHISWAP_MULTI_EXACT_SWAPPER_ADDRESS[chainId || 1]
+                SUSHISWAP_MULTI_EXACT_SWAPPER_ADDRESS[chainId || 137]
             )
             cooker.repayShare(pair.userBorrowPart)
 
@@ -244,7 +244,7 @@ export default function Repay({ pair }: RepayProps) {
             console.log('encoded', data)
 
             cooker.action(
-                SUSHISWAP_MULTI_EXACT_SWAPPER_ADDRESS[chainId || 1],
+                SUSHISWAP_MULTI_EXACT_SWAPPER_ADDRESS[chainId || 137],
                 ZERO,
                 ethers.utils.hexConcat([ethers.utils.hexlify('0x3087d742'), data]),
                 true,

@@ -29,7 +29,7 @@ export default function Deposit({
 
     const [approvalState, approve] = useApproveCallback(
         new TokenAmount(
-            new Token(chainId || 1, tokenAddress, balance.decimals, tokenSymbol, ''),
+            new Token(chainId || 137, tokenAddress, balance.decimals, tokenSymbol, ''),
             value.toBigNumber(balance.decimals).toString()
         ),
         chainId && BENTOBOX_ADDRESS[chainId]

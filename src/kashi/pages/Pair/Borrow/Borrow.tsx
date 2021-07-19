@@ -46,7 +46,7 @@ export default function Borrow({ pair }: BorrowProps) {
     const collateralToken = useCurrency(pair.collateral.address) || undefined
 
     // Calculated
-    const assetNative = WETH[chainId || 1].address === pair.collateral.address
+    const assetNative = WETH[chainId || 137].address === pair.collateral.address
 
     console.log({ assetNative: assetNative })
 
@@ -241,7 +241,7 @@ export default function Borrow({ pair }: BorrowProps) {
             cooker.borrow(
                 borrowValue.toBigNumber(pair.asset.decimals),
                 swap || useBentoBorrow,
-                swap ? SUSHISWAP_MULTISWAPPER_ADDRESS[chainId || 1] : ''
+                swap ? SUSHISWAP_MULTISWAPPER_ADDRESS[chainId || 137] : ''
             )
         }
         if (borrowValueSet && trade) {
@@ -275,7 +275,7 @@ export default function Borrow({ pair }: BorrowProps) {
             )
 
             cooker.action(
-                SUSHISWAP_MULTISWAPPER_ADDRESS[chainId || 1],
+                SUSHISWAP_MULTISWAPPER_ADDRESS[chainId || 137],
                 ZERO,
                 ethers.utils.hexConcat([ethers.utils.hexlify('0x3087d742'), data]),
                 false,

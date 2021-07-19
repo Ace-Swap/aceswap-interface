@@ -34,7 +34,7 @@ export function useBentoBalances(): BentoBalance[] {
     const [balances, setBalances] = useState<any>()
     const tokens = Object.values(useDefaultTokens()).filter((token: Token) => token.chainId === chainId)
 
-    const weth = WETH[chainId || 1].address
+    const weth = WETH[chainId || 137].address
     const info = useContext(KashiContext).state.info
 
     const fetchBentoBalances = useCallback(async () => {

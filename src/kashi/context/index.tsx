@@ -174,7 +174,7 @@ export function KashiProvider({ children }: { children: JSX.Element }) {
     const blockNumber = useBlockNumber()
 
     const { account, chainId } = useActiveWeb3React()
-    const chain: ChainId = chainId || 1
+    const chain: ChainId = chainId || 137
     const weth = WETH[chain].address
     const curreny: any = getCurrency(chain).address
 
@@ -202,7 +202,7 @@ export function KashiProvider({ children }: { children: JSX.Element }) {
                 )
 
                 // Get the deployed pairs from the logs and decode
-                const logPairs = await GetPairs(bentoBoxContract, chainId || 1)
+                const logPairs = await GetPairs(bentoBoxContract, chainId || 137)
 
                 console.log({ logPairs })
 

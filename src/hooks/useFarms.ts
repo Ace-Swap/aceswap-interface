@@ -32,6 +32,7 @@ const useFarms = () => {
             aceData.ace.priceUSD(), // results[3]
             // aceData.bentobox.kashiStakedInfo() //results[4]
         ])
+        console.log('=== results : ', results)
         const pools = results[0]?.data.pools
         const pairAddresses = pools
             .map((pool: any) => {
@@ -46,7 +47,6 @@ const useFarms = () => {
         const liquidityPositions = results[1]?.data.liquidityPositions
         const averageBlockTime = results[2]
         const acePrice = results[3] || 0.001
-        console.log('acePrice: ', acePrice)
         // const kashiPairs = results[4].filter(result => result !== undefined) // filter out undefined (not in onsen) from all kashiPairs
 
         //console.log('kashiPairs:', kashiPairs)
@@ -68,6 +68,7 @@ const useFarms = () => {
                     const liquidityPosition = liquidityPositions.find(
                         (liquidityPosition: any) => liquidityPosition.pair.id === pair.id
                     )
+                    console.log('liquidityPosition : ', liquidityPosition)
                     const blocksPerHour = 3600 / averageBlockTime
                     const balance = Number(pool.balance / 1e18) > 0 ? Number(pool.balance / 1e18) : 0.1
                     const totalSupply = pair.totalSupply > 0 ? pair.totalSupply : 0.1
