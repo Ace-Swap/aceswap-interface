@@ -1,4 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
+import { ChainId } from '@aceswap/sdk'
 import aceData from '@aceswap/ace-data'
 import { useActiveWeb3React } from 'hooks/useActiveWeb3React'
 import { useBoringHelperContract } from 'hooks/useContract'
@@ -14,7 +15,6 @@ import Fraction from '../entities/Fraction'
 const useFarms = () => {
     const [farms, setFarms] = useState<any | undefined>()
     const { account } = useActiveWeb3React()
-    console.log('account : ', account)
     const boringHelperContract = useBoringHelperContract()
 
     const fetchAllFarms = useCallback(async () => {
@@ -28,11 +28,10 @@ const useFarms = () => {
                 query: liquidityPositionSubsetQuery,
                 variables: { user: '0xb1462e354a652b182994f2d4d10e213ff8401cc1' }
             }),
-            getAverageBlockTime(), // results[2]
+            getAverageBlockTime(ChainId.MATIC), // results[2]
             aceData.ace.priceUSD(), // results[3]
             // aceData.bentobox.kashiStakedInfo() //results[4]
         ])
-        console.log('=== results : ', results)
         const pools = results[0]?.data.pools
         const pairAddresses = pools
             .map((pool: any) => {
@@ -68,7 +67,6 @@ const useFarms = () => {
                     const liquidityPosition = liquidityPositions.find(
                         (liquidityPosition: any) => liquidityPosition.pair.id === pair.id
                     )
-                    console.log('liquidityPosition : ', liquidityPosition)
                     const blocksPerHour = 3600 / averageBlockTime
                     const balance = Number(pool.balance / 1e18) > 0 ? Number(pool.balance / 1e18) : 0.1
                     const totalSupply = pair.totalSupply > 0 ? pair.totalSupply : 0.1
@@ -112,7 +110,6 @@ const useFarms = () => {
 
         if (account) {
             const userFarmDetails = await boringHelperContract?.pollPools(account, pids)
-            console.log('userFarmDetails:', userFarmDetails)
             const userFarms = userFarmDetails
                 .filter((farm: any) => {
                     return farm.balance.gt(BigNumber.from(0)) || farm.pending.gt(BigNumber.from(0))

@@ -70,9 +70,9 @@ function Routes(): JSX.Element {
             {/* {chainId === ChainId.MAINNET && <Route exact strict path="/vesting" component={Vesting} />} */}
 
             {/* Migrate */}
-            {(chainId === ChainId.MAINNET || chainId === ChainId.BSC || chainId === ChainId.MATIC) && (
+            {/* {(chainId === ChainId.MAINNET || chainId === ChainId.BSC || chainId === ChainId.MATIC) && (
                 <Route exact strict path="/migrate" component={Migrate} />
-            )}
+            )} */}
 
             {/* SushiBar Staking */}
             {/* {chainId === ChainId.MAINNET && <Route exact strict path="/sushibar" component={SushiBar} />}
