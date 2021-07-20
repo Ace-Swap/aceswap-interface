@@ -107,22 +107,18 @@ function AppBar(): JSX.Element {
                                                 <NavLink id={`vesting-nav-link`} to={'/vesting'}>
                                                     Vesting
                                                 </NavLink>
-                                            )}
+                                            )} */}
                                             {chainId &&
                                                 [
-                                                    ChainId.MAINNET,
-                                                    ChainId.BSC,
-                                                    ChainId.XDAI,
-                                                    ChainId.FANTOM,
                                                     ChainId.MATIC
                                                 ].includes(chainId) && (
                                                     <ExternalLink
                                                         id={`analytics-nav-link`}
-                                                        href={ANALYTICS_URL[chainId] || 'https://analytics.sushi.com'}
+                                                        href={ANALYTICS_URL[chainId] || 'https://analytics.aceswap.finance'}
                                                     >
                                                         Analytics
                                                     </ExternalLink>
-                                                )} */}
+                                                )}
                                         </div>
                                     </div>
                                 </div>
