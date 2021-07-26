@@ -128,7 +128,6 @@ export default function Yield(): JSX.Element {
 }
 
 const TokenBalance = ({ farm }: any) => {
-    console.log('======= ', farm)
     const [expand, setExpand] = useState<boolean>(false)
     return (
         <>

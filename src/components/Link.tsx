@@ -61,7 +61,6 @@ export function ExternalLink({
         },
         [href, target]
     )
-        console.log('external classname', className)
     return (
         <a
             target={target}

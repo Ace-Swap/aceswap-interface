@@ -101,7 +101,7 @@ export const KASHI_ADDRESS: {
     [ChainId.KOVAN]: '',
     [ChainId.FANTOM]: '',
     [ChainId.FANTOM_TESTNET]: '',
-    [ChainId.MATIC]: '0xB527C5295c4Bc348cBb3a2E96B2494fD292075a7',
+    [ChainId.MATIC]: '',
     [ChainId.MATIC_TESTNET]: '',
     [ChainId.XDAI]: '',
     [ChainId.BSC]: '0x2cBA6Ab6574646Badc84F0544d05059e57a5dc42',

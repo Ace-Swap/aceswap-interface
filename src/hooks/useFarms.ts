@@ -115,8 +115,6 @@ const useFarms = () => {
                     return farm.balance.gt(BigNumber.from(0)) || farm.pending.gt(BigNumber.from(0))
                 })
                 .map((farm: any) => {
-                    console.log('userFarm:', farm.pid.toNumber(), farm)
-
                     const pid = farm.pid.toNumber()
                     const farmDetails = sorted.find((pair: any) => pair.pid === pid)
 
