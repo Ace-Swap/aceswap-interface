@@ -54,7 +54,7 @@ import { DarkCard, DarkBlueCard } from '../../components/CardLegacy'
 
 import { useNetworkModalToggle } from '../../state/application/hooks'
 
-import PolygonLogo from '../../assets/images/matic-logo.png'
+import PolygonLogo from '../../assets/images/polygon.png'
 
 export default function Swap() {
     const toggleNetworkModal = useNetworkModalToggle()
@@ -332,7 +332,7 @@ export default function Swap() {
                 onConfirm={handleConfirmTokenWarning}
             />
             <SwapPoolTabs active={'swap'} />
-            <div className="bg-gray-200 shadow-swap-blue-glow w-full max-w-2xl rounded border-high-emphesis border-solid border-2">
+            <div className="bg-gray-401 shadow-swap-blue-glow w-full max-w-2xl rounded  border-solid ">
                 <SwapHeader input={currencies[Field.INPUT]} output={currencies[Field.OUTPUT]} />
                 <Wrapper id="swap-page">
                     <ConfirmSwapModal
@@ -396,14 +396,14 @@ export default function Swap() {
                                 style={{ padding: '0 1rem' }}
                             >
                                 <button
-                                    className="bg-gray-200 rounded-full p-3px m-auto sm:ml-20 -mt-6 -mb-6 z-10"
+                                    className="bg-gray-701 rounded-full p-1 m-auto sm:ml-20 -mt-6 -mb-6 z-10"
                                     onClick={() => {
                                         setApprovalSubmitted(false) // reset 2 step UI for approvals
                                         onSwitchTokens()
                                     }}
                                 >
                                     <div
-                                        className="bg-white hover:bg-dark-200 color-black rounded-full p-3 border-high-emphesis border-solid border-2"
+                                        className="bg-white hover:bg-dark-200 color-black rounded-full p-3"
                                         onMouseEnter={() => setAnimateSwapArrows(true)}
                                         onMouseLeave={() => setAnimateSwapArrows(false)}
                                     >
@@ -514,7 +514,8 @@ export default function Swap() {
                                 <TYPE.main mb="4px">Unsupported Asset</TYPE.main>
                             </ButtonPrimary>
                         ) : !account ? (
-                            <ButtonPrimary onClick={toggleWalletModal}>Connect Wallet</ButtonPrimary>
+                            // <ButtonPrimary onClick={toggleWalletModal}>Connect Wallet</ButtonPrimary>
+                            <button onClick={toggleWalletModal} className="w-full border rounded-full text-white bg-gray-701 py-3 uppercase">Connect Wallet</button>
                         ) : showWrap ? (
                             <ButtonPrimary disabled={Boolean(wrapInputError)} onClick={onWrap}>
                                 {wrapInputError ??
@@ -623,9 +624,10 @@ export default function Swap() {
                             className="hidden sm:block w-full cursor-pointer pt-4 w-full"
                             onClick={() => toggleNetworkModal()}
                         >
-                            <DarkCard>
+                            {/* <DarkCard> */}
+                            <div className="flex border relative bg-gray-701 text-white rounded-full py-2">
                                 <div className="flex justify-between items-center overflow-hidden">
-                                    <img src={PolygonLogo} className="w-24 h-24 absolute top-2" alt="" />
+                                    <img src={PolygonLogo} className="w-16 h-auto absolute top-2 left-5" alt="" />
                                     <div className="pl-32">
                                         <div className="text-white">Check out Ace on Polygon (Matic)</div>
                                         <div className="text-white text-sm">
@@ -633,7 +635,8 @@ export default function Swap() {
                                         </div>
                                     </div>
                                 </div>
-                            </DarkCard>
+                            </div>
+                            {/* </DarkCard> */}
                         </div>
                     )}
                 </Wrapper>

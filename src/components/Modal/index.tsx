@@ -130,7 +130,7 @@ export default function Modal({
                                     ? {
                                           ...bind(),
                                           style: {
-                                              transform: y.interpolate(y => `translateY(${y > 0 ? y : 0}px)`)
+                                              transform: y.interpolate(y => `translateY(${y > 0 ? y : 0}px)`),
                                           }
                                       }
                                     : {})}
@@ -138,12 +138,17 @@ export default function Modal({
                                 minHeight={minHeight}
                                 maxHeight={maxHeight}
                                 mobile={isMobile}
+                                style={{
+                                    borderRadius: '17px',
+                                    background: 'rgba(19, 44, 71, 0.08)'
+                                }}
                             >
                                 <div className="w-full rounded p-px">
                                     <div
-                                        className={`flex flex-col h-full w-full bg-white rounded overflow-y-auto ${
+                                        className={`flex flex-col h-full w-full bg-gray-103 rounded overflow-y-auto ${
                                             noPadding ? 'p-0' : 'p-6'
                                         }`}
+                                        style={{}}
                                     >
                                         {/* prevents the automatic focusing of inputs on mobile by the reach dialog */}
                                         {!initialFocusRef && isMobile ? <div tabIndex={1} /> : null}

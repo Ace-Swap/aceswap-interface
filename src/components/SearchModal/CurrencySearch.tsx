@@ -30,6 +30,7 @@ const ContentWrapper = styled(Column)`
     flex: 1 1;
     position: relative;
     padding: 1.5rem;
+    background: rgba(19, 44, 71, 0.08);
 `
 
 interface CurrencySearchProps {
@@ -163,7 +164,7 @@ export function CurrencySearch({
                     ref={inputRef as RefObject<HTMLInputElement>}
                     onChange={handleInput}
                     onKeyDown={handleEnter}
-                    className="w-full bg-transparent border-gray border-solid border-1 rounded placeholder-secondary focus:placeholder-primary  font-bold text-caption px-6 py-3.5"
+                    className="w-full bg-transparent border-gray-701 border-solid border-1 rounded-full placeholder-blue-101 focus:placeholder-blue-101  text-gray-701 text-caption px-6 py-3.5"
                 />
             </div>
             {showCommonBases && (
@@ -214,12 +215,12 @@ export function CurrencySearch({
             )}
             <div className="mt-3">
                 <Row justify="center">
-                    <ButtonText onClick={showManageView} color={theme.blue1} className="list-token-manage-button">
+                    <ButtonText onClick={showManageView}  className="list-token-manage-button text-gray-502">
                         <RowFixed>
-                            <IconWrapper size="16px" marginRight="6px">
+                            <IconWrapper size="16px" marginRight="6px" color="red">
                                 <Edit />
                             </IconWrapper>
-                            <TYPE.main color={theme.blue1}>Manage</TYPE.main>
+                            <TYPE.main  className="text-gray-502">Manage</TYPE.main>
                         </RowFixed>
                     </ButtonText>
                 </Row>

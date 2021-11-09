@@ -16,13 +16,13 @@ function App(): JSX.Element {
 
     const dispatch = useDispatch<AppDispatch>()
 
-    const [wrapperClassList, setWrapperClassList] = useState("flex flex-col flex-1 items-center justify-start w-screen h-full overflow-y-auto overflow-x-hidden z-0 pt-4 sm:pt-8 px-4 md:pt-10 pb-20")
+    const [wrapperClassList, setWrapperClassList] = useState("flex flex-col flex-1 items-center justify-start w-screen h-full overflow-y-auto overflow-x-hidden z-0 pt-4 sm:pt-8 px-4 md:pt-10 pb-20 bg-gray-701")
 
     useEffect(() => {
         if(pathname === '/trade') {
             setWrapperClassList("flex flex-col flex-1 items-center justify-start w-screen h-full overflow-y-auto overflow-x-hidden z-0")
         } else {
-            setWrapperClassList("flex flex-col flex-1 items-center justify-start w-screen h-full overflow-y-auto overflow-x-hidden z-0 pt-4 sm:pt-8 px-4 md:pt-10 pb-20")
+            setWrapperClassList("flex flex-col flex-1 items-center justify-start w-screen h-full overflow-y-auto overflow-x-hidden z-0 pt-4 sm:pt-8 px-4 md:pt-10 pb-20 bg-gray-701")
         }
     }, [pathname])
 

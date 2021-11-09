@@ -141,7 +141,7 @@ export default function SettingsTab() {
                     </AutoColumn>
                 </ModalContentWrapper>
             </Modal>
-            <StyledMenuButton onClick={toggle} id="open-settings-dialog-button" className="text-gray-500">
+            <StyledMenuButton onClick={toggle} id="open-settings-dialog-button" className="text-white">
                 <Settings color="red" className="stroke-current" />
                 {/* <StyledMenuIcon /> */}
                 {/* {expertMode ? (
