@@ -128,11 +128,11 @@ function CurrencyRow({
         >
             <CurrencyLogo currency={currency} size={'24px'} />
             <Column>
-                <Text title={currency.getName(chainId)} fontWeight={500} color={'text5'}>
+                <Text title={currency.getName(chainId)} fontWeight={500} color={'text5'} className="text-gray-502 font-bold">
                     {currency.getSymbol(chainId)}
                 </Text>
                 {/* <TYPE.darkGray >{currency.getSymbol(chainId)}</TYPE.darkGray> */}
-                <TYPE.darkGray ml="0px" fontSize={'12px'} fontWeight={300}>
+                <TYPE.darkGray ml="0px" fontSize={'12px'} fontWeight={300} className="text-gray-502">
                     {currency.getName(chainId)} {!isOnSelectedList && customAdded && '• Added by user'}
                 </TYPE.darkGray>
             </Column>

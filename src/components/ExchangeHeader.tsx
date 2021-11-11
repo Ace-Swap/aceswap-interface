@@ -12,10 +12,11 @@ export default function SwapHeader({ input = undefined, output = undefined }: an
     const [animateWallet, setAnimateWallet] = useState(false)
     return (
         <div className="flex justify-between space-x-3 pt-4 px-4">
-            <div className="grid grid-cols-2 rounded-md p-3px md:bg-white">
+            <div className="grid grid-cols-2 rounded-full p-3px md:bg-white">
                 <NavLink
-                    className="flex items-center justify-center px-4 md:px-10 rounded-md text-center text-gray-500 hover:text-black text-base font-medium"
-                    activeClassName="font-bold text-black border-high-emphesis border-solid border rounded"
+                    className="flex items-center justify-center px-4 md:px-10 rounded-full uppercase text-center bg-white active:text-white text-base font-medium"
+                    activeClassName="border-solid border rounded-full bg-gray-701 text-white"
+                    style={{color:'#132C47'}}
                     to={{
                         pathname: '/swap',
                         search: `?inputCurrency=${input && input.address ? input.address : 'ETH'}${
@@ -33,8 +34,9 @@ export default function SwapHeader({ input = undefined, output = undefined }: an
                     Limit Order
                 </NavLink> */}
                 <NavLink
-                    className="flex items-center justify-center px-4 md:px-10 rounded-md text-center text-gray-500 hover:text-black text-base font-medium"
-                    activeClassName="font-bold text-black border-high-emphesis border-solid border rounded"
+                     className="flex items-center justify-center px-4 md:px-10 rounded-full uppercase text-center bg-white active:text-white text-base font-medium"
+                     activeClassName="border-solid border rounded-full bg-gray-701 text-white"
+                     style={{color:'#132C47'}}
                     to={`/add/${input && input.address ? input.address : 'ETH'}${
                         output && output.address ? `/${output.address}` : ''
                     }`}
@@ -52,7 +54,7 @@ export default function SwapHeader({ input = undefined, output = undefined }: an
                     Liquidity
                 </NavLink>
             </div>
-            <div className="flex items-center rounded md:border-high-emphesis md:border-solid md:border-2 md:p-2">
+            <div className="flex items-center rounded-full md:border-white md:border-solid md:border md:p-1">
                 <div className="grid grid-flow-col gap-3">
                     {/* <div className="hidden md:flex space-x-3 items-center bg-dark-800 hover:bg-dark-700 rounded-sm h-full w-full px-2 py-1.5 cursor-pointer">
                         <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +67,7 @@ export default function SwapHeader({ input = undefined, output = undefined }: an
                             <Gas />
                         </div>
                     </div> */}
-                    <div className="bg-white hover:bg-gray-300 rounded-sm h-full w-full p-1 md:px-2">
+                    <div className="bg-gray-501 hover:bg-gray-300 rounded-full h-full w-full " style={{padding:'3px 0px'}}>
                         <Settings />
                     </div>
                     {/* <button

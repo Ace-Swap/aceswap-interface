@@ -331,7 +331,7 @@ export default function AddLiquidity({
             </Helmet>
             <div className="w-full max-w-2xl mb-5 px-4">
                 <NavLink
-                    className="text-center text-secondary hover:text-black text-base font-medium"
+                    className="text-center text-white hover:text-gray-100 text-base font-medium"
                     to={'/pool'}
                 >
                     View Your Liquidity Positions &gt;
@@ -349,7 +349,7 @@ export default function AddLiquidity({
                     {currencies[Field.CURRENCY_B]?.getSymbol(chainId)} POOL
                 </button> */}
             </div>
-            <div className="bg-gray-200 shadow-swap-blue-glow w-full max-w-2xl rounded border-high-emphesis border-solid border-2">
+            <div className="bg-gray-401 shadow-swap-blue-glow w-full max-w-2xl rounded  border-solid ">
                 <Header input={currencies[Field.CURRENCY_A]} output={currencies[Field.CURRENCY_B]} />
                 <Wrapper>
                     <TransactionConfirmationModal
@@ -377,6 +377,7 @@ export default function AddLiquidity({
                             ) : (
                                 <>
                                     <Alert
+                                        className="bg-white"
                                         showIcon={false}
                                         message={
                                             <>
@@ -414,8 +415,8 @@ export default function AddLiquidity({
                                 justify={expertMode ? 'space-between' : 'flex-start'}
                                 style={{ padding: '0 1rem' }}
                             >
-                                <button className="bg-gray-200 rounded-full p-3px m-auto sm:ml-20 -mt-6 -mb-6 z-10">
-                                    <div className="bg-white rounded-full p-3 border-high-emphesis border-solid border-2">
+                                <button className="bg-gray-701 rounded-full p-1 m-auto sm:ml-20 -mt-6 -mb-6 z-10">
+                                    <div className="bg-white rounded-full p-3 ">
                                         <Plus size="32" color="black" />
                                     </div>
                                 </button>
@@ -456,7 +457,8 @@ export default function AddLiquidity({
                                 <TYPE.main mb="4px">Unsupported Asset</TYPE.main>
                             </ButtonPrimary>
                         ) : !account ? (
-                            <ButtonPrimary onClick={toggleWalletModal}>Connect Wallet</ButtonPrimary>
+                            // <ButtonPrimary onClick={toggleWalletModal}>Connect Wallet</ButtonPrimary>
+                            <button className="w-full border rounded-full text-white bg-gray-701 py-3 uppercase" onClick={toggleWalletModal}>Connect Wallet</button>
                         ) : (
                             <AutoColumn gap={'md'}>
                                 {(approvalA === ApprovalState.NOT_APPROVED ||

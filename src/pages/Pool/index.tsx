@@ -157,30 +157,32 @@ export default function Pool() {
             <Helmet>
                 <title>Pool | Ace</title>
             </Helmet>
-            <div className="bg-gray-200 shadow-swap-blue-glow w-full max-w-2xl rounded border-high-emphesis border-solid border-2">
+            <div className="bg-gray-401 shadow-swap-blue-glow w-full max-w-2xl rounded  border-solid ">
                 <ExchangeHeader />
                 <div id="pool-page" className="p-4">
                     <SwapPoolTabs active={'pool'} />
                     <Alert
+                     className="bg-white"
+                     showIcon={false}
                         title="Liquidity Provider Rewards"
                         message="Liquidity providers earn a 0.225% fee on all trades proportional to their share of
                         the pool. Fees are added to the pool, accrue in real time and can be claimed by
                         withdrawing your liquidity."
                         type="information"
                     />
-                    <div className="flex justify-between items-center my-4">
+                    <div className="flex justify-between items-center my-4 text-gray-503">
                         <div className="text-base font-medium">Your Liquidity Positions</div>
                         <div className="text-sm font-bold">
                             Don&apos;t see a pool you joined?{' '}
-                            <Link id="import-pool-link" to="/find" className="text-blue">
+                            <Link id="import-pool-link" to="/find" className="text-white">
                                 Import it.
                             </Link>
                         </div>
                     </div>
-                    <div className="grid grid-flow-row gap-3">
+                    <div className="grid grid-flow-row gap-3 text-gray-503">
                         {!account ? (
                             <Card padding="40px">
-                                <TYPE.body color={theme.text3} textAlign="center">
+                                <TYPE.body className="text-gray-503" textAlign="center">
                                     Connect to a wallet to view your liquidity.
                                 </TYPE.body>
                             </Card>
@@ -231,10 +233,11 @@ export default function Pool() {
                             </Text>
                         )}
                         <div className="grid grid-cols-2 gap-4">
+                            {/* 
                             <Button id="join-pool-button" color="blue" onClick={() => history.push('/add/ETH')}>
                                 Add Liquidity
-                            </Button>
-                            <Button
+                            </Button> 
+                             <Button
                                 id="create-pool-button"
                                 color="pink"
                                 // className="bg-dark-800"
@@ -242,6 +245,20 @@ export default function Pool() {
                             >
                                 Create a pair
                             </Button>
+                            */}
+                            <button 
+                                id="join-pool-button" 
+                                onClick={() => history.push('/add/ETH')}
+                                className="text-white bg-gray-701 rounded-full w-full px-4 py-3 "
+                            >
+                                Add Liquidity
+                            </button>
+                            <button 
+                                id="create-pool-button"
+                                className="bg-gray-501 text-white rounded-full w-full px-4 py-3"
+                                onClick={() => history.push('/create/ETH')}>
+                                Create a pair
+                            </button>
                         </div>
                     </div>
                 </div>

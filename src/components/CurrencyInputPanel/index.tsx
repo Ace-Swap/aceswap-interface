@@ -162,7 +162,7 @@ export default function CurrencyInputPanel({
     const valueUSDC = formattedNum(Number(value) * Number(currencyUSDC))
 
     return (
-        <div id={id} className="rounded bg-white p-5">
+        <div id={id} className="rounded-full bg-white p-5">
             <div
                 className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-between"
                 // hideInput={hideInput}
@@ -219,8 +219,8 @@ export default function CurrencyInputPanel({
                                     <CurrencyLogo currency={currency} size={'54px'} />
                                 </div>
                             ) : (
-                                <div className="bg-dark-700 rounded" style={{ maxWidth: 54, maxHeight: 54 }}>
-                                    <div style={{ width: 54, height: 54 }}>
+                                <div className="bg-dark-700 rounded-full" style={{ maxWidth: 54, maxHeight: 54 }}>
+                                    <div style={{ width: 54, height: 54 }} >
                                         <Lottie animationData={selectCoinAnimation} autoplay loop />
                                     </div>
                                 </div>
@@ -232,7 +232,7 @@ export default function CurrencyInputPanel({
                             ) : (
                                 <div className="flex flex-1 flex-col items-start justify-center mx-3.5">
                                     {label && (
-                                        <div className="text-xs text-black font-medium whitespace-nowrap">
+                                        <div className="text-xs text-gray-701 font-medium whitespace-nowrap">
                                             {label}
                                         </div>
                                     )}
@@ -250,7 +250,7 @@ export default function CurrencyInputPanel({
                                                       currency.symbol.length
                                                   )
                                                 : currency?.getSymbol(chainId)) || (
-                                                <div className="bg-transparent hover:border-high-emphesis hover:text-black border border-low-emphesis rounded-full px-2 py-1 text-secondary text-xs font-medium mt-1 whitespace-nowrap ">
+                                                <div className="bg-transparent hover:border-2 hover:text-black border border-gray-501 rounded-full px-2 py-1 text-gray-501 text-xs font-medium mt-1 whitespace-nowrap ">
                                                     {t('selectToken')}
                                                 </div>
                                             )}
@@ -277,7 +277,7 @@ export default function CurrencyInputPanel({
                         </>
                     )} */}
                 </div>
-                <div className="flex items-center rounded bg-gray-200 space-x-3 p-3 w-full sm:w-3/5">
+                <div className="flex items-center rounded-full bg-gray-200 space-x-3 p-3 w-full sm:w-3/5">
                     {!hideInput && (
                         <>
                             {account && currency && showMaxButton && label !== 'To' && (
@@ -290,7 +290,7 @@ export default function CurrencyInputPanel({
                                 </Button>
                             )}
                             <NumericalInput
-                                className="token-amount-input text-black"
+                                className="token-amount-input text-gray-701"
                                 value={value}
                                 onUserInput={val => {
                                     onUserInput(val)

@@ -35,6 +35,15 @@ module.exports = {
                 '4': '4px'
             }
         },
+        backgroundColor: theme => ({
+            ...theme('colors'),
+            'gray-701': '#132C47',
+            'gray-501': '#697597',
+            'gray-401': 'rgba(255, 255, 255, 0.2)',
+            'gray-101': 'rgba(255, 255, 255, 0.1)',
+            'gray-102': 'rgba(19, 44, 71, 0.08)',
+            'gray-103': '#D5D7D9'
+        }),
         colors: {
             ...defaultTheme.colors,
             red: '#FF3838',
@@ -42,6 +51,11 @@ module.exports = {
             pink: '#FA52A0',
             purple: '#A755DD',
             green: '#7CFF6B',
+            'gray-701': '#132C47',
+            'gray-501': '#697597',
+            'blue-101': '#768496',
+            'gray-502': '#132C4780',
+            'gray-503': '#98A2AF',
 
             'pink-red': '#FE5A75',
             'light-brown': '#FEC464',
@@ -66,6 +80,15 @@ module.exports = {
             secondary: '#7F7F7F',
             'low-emphesis': '#575757'
         },
+        borderColor: theme => ({
+            ...theme('colors'),
+            'gray-501': '#697597',
+            'gray-701': '#132C47',
+        }),
+        placeholderColor: theme => ({
+            ...theme('colors'),
+            'blue-101': '#768496',
+        }),
         screens: {
             sm: '480px',
             md: '768px',

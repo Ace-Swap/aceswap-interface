@@ -2,7 +2,7 @@ import { ChainId, Currency } from '@aceswap/sdk'
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import Logo from '../assets/images/ace_logo.svg'
+import Logo from '../assets/images/ace_logo.png'
 import { useActiveWeb3React } from '../hooks/useActiveWeb3React'
 import { useETHBalances } from '../state/wallet/hooks'
 import { ReactComponent as Burger } from '../assets/images/burger.svg'
@@ -38,25 +38,26 @@ function AppBar(): JSX.Element {
     }, [pathname])
 
     return (
-        <header className="flex flex-row flex-nowrap justify-between w-screen">
+        <header className="flex flex-row flex-nowrap justify-between w-screen bg-gray-701">
             <Disclosure as="nav" className={navClassList}>
                 {({ open }) => (
                     <>
                         <div className="px-4 py-1.5">
                             <div className="flex items-center justify-between h-16">
                                 <div className="flex items-center">
-                                    <div className="flex-shrink-0">
-                                        <img src={Logo} alt="Ace" className="h-10 w-auto" />
+                                    <div className="flex-shrink-0 mr-4">
+                                        <img src={Logo} alt="Ace" className="h-7 w-auto" />
                                     </div>
-                                    <div className="hidden sm:block sm:ml-4">
-                                        <div className="flex space-x-2 text-gray-500">
-                                            <NavLink id={`swap-nav-link`} to={'/swap'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
+                                    <div className="hidden sm:block sm:ml-4 ">
+                                        <div className="flex space-x-2 text-white ">
+                                            <NavLink id={`swap-nav-link`} to={'/swap'} activeClassName="font-bold border-solid border rounded bg-gray-101 ">
                                                 {t('swap')}
                                             </NavLink>
                                             <NavLink
                                                 id={`pool-nav-link`}
                                                 to={'/pool'}
-                                                activeClassName="font-bold border-high-emphesis border-solid border-2 rounded"
+                                                // className="hover:text-white"
+                                                activeClassName="font-bold border-solid border rounded bg-gray-101 "
                                                 isActive={(match, { pathname }) =>
                                                     Boolean(match) ||
                                                     pathname.startsWith('/add') ||
@@ -68,7 +69,7 @@ function AppBar(): JSX.Element {
                                                 {t('pool')}
                                             </NavLink>
                                             {chainId && [ChainId.MAINNET, ChainId.MATIC].includes(chainId) && (
-                                                <NavLink id={`yield-nav-link`} to={'/yield'} activeClassName="font-bold border-high-emphesis border-solid border-2 rounded">
+                                                <NavLink id={`yield-nav-link`} to={'/yield'} activeClassName="font-bold border-solid border rounded bg-gray-101">
                                                     Yield
                                                 </NavLink>
                                             )}

@@ -67,7 +67,7 @@ export const IconWrapper = styled.div<{ stroke?: string; size?: string; marginRi
     margin-right: ${({ marginRight }) => marginRight ?? 0};
     margin-left: ${({ marginLeft }) => marginLeft ?? 0};
     & > * {
-        stroke: ${({ theme, stroke }) => stroke ?? theme.blue1};
+        stroke: ${({ theme, stroke }) => stroke ?? '#132C4780'};
     }
 `
 
@@ -99,7 +99,7 @@ export const LinkStyledButton = styled.button<{ disabled?: boolean }>`
 export const StyledInternalLink = styled(Link)`
     text-decoration: none;
     cursor: pointer;
-    color: ${({ theme }) => theme.primary1};
+    color: #fff;
     font-weight: 500;
 
     :hover {

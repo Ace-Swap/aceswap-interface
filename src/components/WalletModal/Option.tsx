@@ -111,9 +111,9 @@ export default function Option({
     id: string
 }) {
     const content = (
-        <OptionCardClickable id={id} onClick={onClick} clickable={clickable && !active} active={active}>
+        <OptionCardClickable id={id} onClick={onClick} clickable={clickable && !active} active={active} className="rounded-full border-gray-701">
             <OptionCardLeft>
-                <HeaderText color={color}>
+                <HeaderText color={color} className="text-gray-701">
                     {active ? (
                         <CircleWrapper>
                             <GreenCircle>

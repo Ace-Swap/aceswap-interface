@@ -341,7 +341,7 @@ export default function WalletModal({
                     </HeaderRow>
                 ) : (
                     <HeaderRow>
-                        <HoverText>Connect to a wallet</HoverText>
+                        <HoverText className="text-gray-701 uppercase font-bold">Connect to a wallet</HoverText>
                     </HeaderRow>
                 )}
                 <ContentWrapper>
@@ -357,8 +357,8 @@ export default function WalletModal({
                     )}
                     {walletView !== WALLET_VIEWS.PENDING && (
                         <Blurb>
-                            <span>New to Ethereum? &nbsp;</span>{' '}
-                            <ExternalLink href="https://ethereum.org/wallets/">Learn more about wallets</ExternalLink>
+                            <span className="text-gray-701">New to Ethereum? &nbsp;</span>{' '}
+                            <ExternalLink href="https://ethereum.org/wallets/" className="text-blue-101">Learn more about wallets</ExternalLink>
                         </Blurb>
                     )}
                 </ContentWrapper>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const TYPE = {
     information: {
-        color: 'bg-purple bg-opacity-60 text-black',
+        color: ' bg-opacity-60 text-gray-701',
         icon: (
             <svg
                 width="33"
@@ -82,7 +82,7 @@ export default function Alert({
             <div className="flex items-center">
                 {showIcon && <div className="flex-shrink-0">{icon}</div>}
                 <div className={!showIcon ? 'ml-0' : 'ml-3'}>
-                    <p className="text-caption text-black">{message}</p>
+                    <p className="text-caption">{message}</p>
                 </div>
             </div>
         </div>
